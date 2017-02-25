@@ -1,0 +1,46 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  color: silver;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  background-image: url(/static/images/backgrounds/3flow.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* navigation */
+nav.my_navbar {
+    //color: black;
+    background-color: rgb(3, 4, 66);
+    background-color: rgba(3, 4, 66, 0.8);
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: turquoise;
+}
+
+.navbar-collapse li.my_active a {
+    text-decoration:underline;
+    background-color: rgb(3, 4, 66);
+    background-color: rgba(3, 4, 66, 0.3);
+}
+
+
+/* jumbotron homepage */
+.jumbotron {
+    background-color: rgb(0, 60, 0);
+    background-color: rgba(0, 60, 0, 0.8);
+    text-shadow: 2px 2px 5px black;
+}
+
+div.jumbotron a.email_me {
+    border: 2px solid;
+    color:silver;
+    box-shadow: 2px 2px 5px black;
+}
+
+div.jumbotron a.email_me:hover {
+    border: 2px solid;
+    color: gold;
+}

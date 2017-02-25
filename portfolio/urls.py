@@ -12,5 +12,5 @@ Including another URLconf
 """
 
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name="my_forms/home_page.html"), name="forms"),
+    url(r'^$', TemplateView.as_view(template_name="portfolio/home_page.html"), name="home"),
 ]
