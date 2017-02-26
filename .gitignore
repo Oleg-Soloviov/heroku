@@ -2,4 +2,3 @@
 staticfiles
 .env
 db.sqlite3
-#portfolio/static/bootstrap
