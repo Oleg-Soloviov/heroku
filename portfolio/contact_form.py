@@ -12,7 +12,7 @@ class ContactForm(forms.Form):
         return requests.post(
             "https://api.mailgun.net/v3/sandbox075b55521f59465c82d4d87856d6f43c.mailgun.org/messages",
             auth=("api", "key-e1518fd3e6d897d250e23581f295417c"),
-            data={"from": self.cleaned_data['email'],
+            data={"from": self.cleaned_data['email'] + " <postmaster@sandbox075b55521f59465c82d4d87856d6f43c.mailgun.org>",
                   "to": "Oleg <osoloviov@list.ru>",
                   "subject": self.cleaned_data['subject'],
                   "text": self.cleaned_data['message']})
