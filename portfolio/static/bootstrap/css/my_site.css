@@ -60,9 +60,22 @@ div.jumbotron a.email_me:hover {
     font-size: larger;
 }
 
+#contact_form[class="error_field"] {
+    border-color: red;
+}
+
+#contact_form button {
+    opacity: 0.8;
+}
+
 #contact_form input:focus, textarea:focus {
     border: 2px solid #FB36A2;
     background-color: #090757;
+}
+
+.errorlist {
+    list-style-type: none;
+    color: red;
 }
 
 /*       thanks page      */
