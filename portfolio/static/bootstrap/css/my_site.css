@@ -79,7 +79,7 @@ div.jumbotron a.email_me:hover {
 /*       thanks page      */
 div#thanks {
     margin-top: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 90%;
     background-color: rgb(0, 60, 0);
     background-color: rgba(0, 60, 0, 0.8);
 }
