@@ -7,7 +7,9 @@ class ContactForm(forms.Form):
     email = forms.EmailField(widget=forms.EmailInput(attrs={'placeholder': 'Email..',}))
     subject = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Subject..',}))
     message = forms.CharField(widget=forms.Textarea(attrs={'placeholder': 'Message...'}))
-
+    
+    error_css_class = 'error'
+    
     def send_email(self):
         return requests.post(
             "https://api.mailgun.net/v3/sandbox075b55521f59465c82d4d87856d6f43c.mailgun.org/messages",

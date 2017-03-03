@@ -48,6 +48,7 @@ div.jumbotron a.email_me:hover {
 
 
 /*     contact form    */
+
 #contact_form input, textarea {
     opacity: 0.7;
     width: 100%;
@@ -58,10 +59,6 @@ div.jumbotron a.email_me:hover {
     border-radius: 4px;
     outline: none;
     font-size: larger;
-}
-
-#contact_form[class="error_field"] {
-    border-color: red;
 }
 
 #contact_form button {
@@ -75,6 +72,7 @@ div.jumbotron a.email_me:hover {
 
 .errorlist {
     list-style-type: none;
+    margin-bottom: 0px;
     color: red;
 }
 

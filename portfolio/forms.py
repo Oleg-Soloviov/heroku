@@ -13,7 +13,7 @@ MY_COLOR = (
 
 class BootstrapForm(forms.Form):
     your_name = forms.CharField(label='CharField', max_length=100)
-    happiness = forms.BoolleanField(label='BooleanField')
+    happiness = forms.BooleanField(label='BooleanField')
     color = models.ChoiceField(label='ChoiceField', choices=MY_COLOR)
     colors = models.MultipleChoiceField(label='MultipleChoiceField', choices=MY_COLOR)
     my_date = models.DateField(label='DateField', help_text='YYYY-MM-DD')
