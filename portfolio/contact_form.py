@@ -1,12 +1,12 @@
 from django import forms
-#from django.core.mail import send_mail
+from django.utils.translation import ugettext_lazy as _
 import requests
 
 
 class ContactForm(forms.Form):
-    email = forms.EmailField(widget=forms.EmailInput(attrs={'placeholder': 'Email..',}))
-    subject = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Subject..',}))
-    message = forms.CharField(widget=forms.Textarea(attrs={'placeholder': 'Message...'}))
+    email = forms.EmailField(widget=forms.EmailInput(attrs={'placeholder': _('Email..'),}))
+    subject = forms.CharField(widget=forms.TextInput(attrs={'placeholder': _('Subject..'),}))
+    message = forms.CharField(widget=forms.Textarea(attrs={'placeholder': _('Message...')}))
     
     error_css_class = 'error'
     

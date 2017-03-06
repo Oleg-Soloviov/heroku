@@ -4,6 +4,13 @@
 
 {% block title %}{% trans "Send me your letter." %}{% endblock %}
 
+{% block nav_items %}
+    <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+    <li><a href="#about">{% trans "Forms" %}</a></li>
+    <li class="my_active"><a href="{% url 'contact' %}">{% trans "Contact" %}</a></li>
+{% endblock nav_items %}
+
+
 {% block main_container %}
     <div class="container">
         <div class="row">

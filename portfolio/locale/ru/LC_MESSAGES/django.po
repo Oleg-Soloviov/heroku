@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-05 08:24+0000\n"
+"POT-Creation-Date: 2017-03-06 09:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,35 +20,51 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: templates/base.html:45 templates/base.html:62
+#: contact_form.py:7
+msgid "Email.."
+msgstr "Ваш Email"
+
+#: contact_form.py:8
+msgid "Subject.."
+msgstr "Тема письма"
+
+#: contact_form.py:9
+msgid "Message..."
+msgstr "Ваше сообщение"
+
+#: templates/base.html:53 templates/base.html:92
 msgid "My portfolio site"
 msgstr "Мой портфолио сайт"
 
-#: templates/base.html:49
+#: templates/base.html:58 templates/portfolio/contact.html:8
 msgid "Home"
 msgstr "Главная"
 
-#: templates/base.html:50
+#: templates/base.html:59 templates/portfolio/contact.html:9
 msgid "Forms"
 msgstr "Формы"
 
-#: templates/base.html:51
+#: templates/base.html:60 templates/portfolio/contact.html:10
 msgid "Contact"
 msgstr "Контакты"
+
+#: templates/base.html:76
+msgid "Change"
+msgstr ""
 
 #: templates/portfolio/contact.html:5
 msgid "Send me your letter."
 msgstr "Пошлите мне письмо"
 
-#: templates/portfolio/contact.html:11
+#: templates/portfolio/contact.html:18
 msgid "To send me a letter fill the form."
 msgstr "Чтобы послать мне письмо заполните форму."
 
-#: templates/portfolio/contact.html:30
+#: templates/portfolio/contact.html:37
 msgid "Submit"
 msgstr "Отправить письмо"
 
-#: templates/portfolio/contact.html:33
+#: templates/portfolio/contact.html:40
 msgid "Reset"
 msgstr "Очистить"
 
@@ -60,7 +76,9 @@ msgstr ""
 msgid ""
 "I am a web developer: Python, Django, HTML, CSS, JavaScript, Bootstrap, SQL, "
 "PostgreSQL, MySQL, Linux&nbsp;(Debian,&nbsp;Ubuntu), Heroku."
-msgstr "Я разработчик сайтов:  Python, Django, HTML, CSS, JavaScript, Bootstrap, SQL, PostgreSQL, MySQL, Linux&nbsp;(Debian,&nbsp;Ubuntu), Heroku."
+msgstr ""
+"Я разработчик сайтов:  Python, Django, HTML, CSS, JavaScript, Bootstrap, "
+"SQL, PostgreSQL, MySQL, Linux&nbsp;(Debian,&nbsp;Ubuntu), Heroku."
 
 #: templates/portfolio/home_page.html:11
 msgid "As you can see, I am not a designer."
@@ -70,7 +88,9 @@ msgstr "Как Вы уже заметили, я не дизайнер."
 msgid ""
 "This site is for training purposes. If you need a web developer send me a "
 "letter."
-msgstr "Этот сайт предназначен для отработки навыков. Если Вам нужно создать сайт, то напишите мне."
+msgstr ""
+"Этот сайт предназначен для отработки навыков. Если Вам нужно создать сайт, "
+"то напишите мне."
 
 #: templates/portfolio/home_page.html:13
 msgid "Send a letter"
