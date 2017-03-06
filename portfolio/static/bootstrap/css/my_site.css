@@ -27,7 +27,7 @@ nav.my_navbar {
     background-color: rgba(3, 4, 66, 0.3);
 }
 
-#change_lang select, button {
+#change_lang select {
     background-color: rgb(3, 4, 66);
     background-color: rgba(3, 4, 66, 0.8);
     color: turquoise;
