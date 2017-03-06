@@ -1,5 +1,13 @@
 {% load staticfiles %}
 {% load i18n %}
+
+<!--
+{% get_current_language as LANGUAGE_CODE %}
+{% get_language_info for LANGUAGE_CODE as current_lang %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,12 +58,32 @@
             <li><a href="#about">{% trans "Forms" %}</a></li>
             <li><a href="{% url 'contact' %}">{% trans "Contact" %}</a></li>
           </ul>
+           <ul class="nav navbar-nav navbar-right">
+            <form id="change_lang" class="navbar-form navbar-right" action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                <div class="form-group">
+                  <select name="language" class="form-control  select">
+                    {% get_current_language as LANGUAGE_CODE %}
+                    {% get_available_languages as LANGUAGES %}
+                    {% get_language_info_list for LANGUAGES as languages %}
+                    {% for language in languages %}
+                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                            {{ language.name_local }} ({{ language.code }})
+                        </option>
+                    {% endfor %}
+                  </select>
+                  <button type="submit" class="btn btn-default">{% trans "Change" %}</button>
+                </div>
+                
+            </form>
+            </ul><!-- .navbar-right -->
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
 
 {% block main_container %}
 {% endblock main_container %}
+
+
       <hr>
 
       <footer>

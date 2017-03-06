@@ -19,3 +19,8 @@ class ContactForm(forms.Form):
                   "subject": self.cleaned_data['subject'],
                   "text": self.cleaned_data['message']})
 
+
+
+#~ HTML5 input types and browser validation
+#~ 
+#~ If your form includes a URLField, an EmailField or any integer field type, Django will use the url, email and number HTML5 input types. By default, browsers may apply their own validation on these fields, which may be stricter than Django’s validation. If you would like to disable this behavior, set the novalidate attribute on the form tag, or specify a different widget on the field, like TextInput.

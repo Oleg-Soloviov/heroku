@@ -27,6 +27,19 @@ nav.my_navbar {
     background-color: rgba(3, 4, 66, 0.3);
 }
 
+#change_lang select, button {
+    background-color: rgb(3, 4, 66);
+    background-color: rgba(3, 4, 66, 0.8);
+    color: turquoise;
+    border-color: rgba(255,255,255, 0.4); 
+}
+
+#change_lang button {
+    background-color: rgb(3, 4, 66);
+    background-color: rgba(3, 4, 66, 0.8);
+    color: turquoise;
+    border-color: rgba(255,255,255, 0.4);
+}
 
 /* jumbotron homepage */
 .jumbotron {
