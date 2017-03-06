@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Server Error (500)" %}{% endblock %}
+{% block main_container %}
+    <div class="jumbotron">
+        <h1><span style="color:green;">5</span><span style="color:red">0</span><span style="color:blue">0</span></h1>
+        <p style="color:#FF0040">{% trans "Server Error (500)" %}</p>
+    </div>
+{% endblock main_container %}

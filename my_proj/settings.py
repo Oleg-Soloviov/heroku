@@ -29,7 +29,7 @@ SECRET_KEY = 'w-i9r*+qj$!hfom7$f#qcqmnfq5v+e*&@nx5(v(2k4mi)-3f3b'
 # set DEBUG virable on heroku to 'PRODUCTION'
 MY_ENV = os.environ.get('DEBUG', 'False')
 
-if MY_ENV == 'PRODUCTION':
+if MY_ENV=='PRODUCTION':
     DEBUG = False
 else:
     DEBUG = True
