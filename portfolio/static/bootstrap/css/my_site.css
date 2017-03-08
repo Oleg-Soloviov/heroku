@@ -89,6 +89,33 @@ div.jumbotron a.email_me:hover {
     color: red;
 }
 
+/* django forms */
+
+#django_forms {
+    background-color: navy;
+    opacity: 0.8;
+    border-radius: 5px;
+}
+/*
+#django_forms input, select, option {
+    background-color: #090757;
+    width: 100%;
+    opacity: 0.8
+}
+
+#id_color {
+    background-color: #090757;
+    width: 100%;
+    opacity: 0.8
+}
+
+#id_color ul {
+    background-color: #090757;
+    width: 100%;
+    opacity: 0.8
+}
+*/
+
 /*       thanks page      */
 div#thanks {
     margin-top: 10%;

@@ -36,11 +36,11 @@ else:
 
 ALLOWED_HOSTS = ['*']
 
-
 # Application definition
 
 INSTALLED_APPS = [
-    'portfolio',
+    'portfolio.apps.PortfolioConfig',
+    'crispy_forms',
     
     'django.contrib.admin',
     'django.contrib.auth',
@@ -53,7 +53,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.locale.LocaleMiddleware',    # ADDED BY ME FOR I18N
+    'django.middleware.locale.LocaleMiddleware',    # FOR I18N: after session, before common
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -145,3 +145,4 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap3'

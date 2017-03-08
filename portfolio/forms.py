@@ -1,6 +1,9 @@
 from django import forms
 import os
 
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Submit, Reset
+
 MY_COLOR = (
     ('R', 'Red'),
     ('G', 'Green'),
@@ -11,28 +14,38 @@ MY_COLOR = (
 # method="POST"
 # enctype="multipart/form-data"
 
-class BootstrapForm(forms.Form):
-    your_name = forms.CharField(label='CharField', max_length=100)
-    happiness = forms.BooleanField(label='BooleanField')
-    color = models.ChoiceField(label='ChoiceField', choices=MY_COLOR)
-    colors = models.MultipleChoiceField(label='MultipleChoiceField', choices=MY_COLOR)
-    my_date = models.DateField(label='DateField', help_text='YYYY-MM-DD')
-    my_datetime = models.DateTimeField(label='DateTimeField', help_text='2006-10-25 14:30:59')
-    my_decimal = models.DecimalField(label='DecimalField', max_digits=6, decimal_places='2', help_text='xxxx.xx', localize=False)
-    my_duration = models.DurationField(label='DurationField', help_text='DD HH:MM:SS.uuuuuu')
-    my_email = models.EmailField(label='EmailField', min_length=6)
-    my_file = models.FileField(label='FileField')
-    choose_file = models.FilePathField(label='FilePathField', path=os.path.abspath('static/file_choice'))
-    my_float = models.FloatField(label='FloatField', localize=False)
-    my_image = models.ImageField(label='ImageField')
-    integer = models.IntegerField(label='IntegerField', localize=False, max_value=100, min_value=10)
-    ip = models.GenericIPAddressField(label='GenericIPAddressField')
-    null_boolean = models.NullBooleanField(label='NullBooleanField' )
-    my_regex = models.RegexField(label='RegexField', help_text='with "foo" inside')
-    my_slug = models.SlugField(label='SlugField', help_text='only letters, numbers, underscores, and hyphens')
-    my_time = models.TimeField(label='TimeField', help_text='14:30:59 or 14:30')
-    my_url = models.URLField(label='URLField', min_length=3, help_text='Validates that the given value is a valid URL')
+class AllDjangoFieldsForm(forms.Form):
+    your_name = forms.CharField(label='CharField', max_length=100, required=False)
+    happiness = forms.BooleanField(label='BooleanField', required=False)
+    color = forms.ChoiceField(label='ChoiceField', choices=MY_COLOR, required=False)
+    colors = forms.MultipleChoiceField(label='MultipleChoiceField', choices=MY_COLOR, required=False)
+    my_date = forms.DateField(label='DateField', help_text='YYYY-MM-DD', required=False)
+    my_datetime = forms.DateTimeField(label='DateTimeField', help_text='2006-10-25 14:30:59', required=False)
+    my_decimal = forms.DecimalField(label='DecimalField', max_digits=6, decimal_places=2, help_text='xxxx.xx', localize=False, required=False)
+    my_duration = forms.DurationField(label='DurationField', help_text='DD HH:MM:SS.uuuuuu', required=False)
+    my_email = forms.EmailField(label='EmailField', min_length=6, required=False)
+    my_file = forms.FileField(label='FileField', required=False)
+    choose_file = forms.FilePathField(label='FilePathField', path=os.path.abspath('static/file_choice/'), required=False)
+    my_float = forms.FloatField(label='FloatField', localize=False, required=False)
+    my_image = forms.ImageField(label='ImageField', required=False)
+    integer = forms.IntegerField(label='IntegerField', localize=False, max_value=100, min_value=10, required=False)
+    ip = forms.GenericIPAddressField(label='GenericIPAddressField', required=False)
+    null_boolean = forms.NullBooleanField(label='NullBooleanField', required=False)
+    my_regex = forms.RegexField(label='RegexField', regex='foo', help_text='with "foo" inside', required=False)
+    my_slug = forms.SlugField(label='SlugField', help_text='only letters, numbers, underscores, and hyphens', required=False)
+    my_time = forms.TimeField(label='TimeField', help_text='14:30:59 or 14:30', required=False)
+    my_url = forms.URLField(label='URLField', min_length=3, help_text='Validates that the given value is a valid URL', required=False)
     
+    def __init__(self, *args, **kwargs):
+        super(AllDjangoFieldsForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.form_id = 'id-allgjangofields'
+        self.helper.form_class = 'blueForms'
+        self.helper.form_method = 'post'
+        self.helper.form_action = 'django_forms'
+
+        self.helper.add_input(Submit('submit', 'Submit'))
+        self.helper.add_input(Reset('reset', 'Reset'))
     
 #    my_coerce = models.TypedChoiceField(label='TypedChoiceField', coerce= , empty_value=)
 #    multi_coerce = models.TypedMultipleChoiceField(label='TypedMultipleChoiceField', coerce= , empty_value=)
