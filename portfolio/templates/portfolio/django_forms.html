@@ -20,7 +20,7 @@
         </div>
         <div class="row">
             <div id="django_forms" class="col-md-6 col-md-offset-3">
-                <form id="django_fields_form" action="{% url 'django_forms' %}" method="post" autocomplete="off" novalidate="">
+                <form id="django_fields_form" action="{% url 'portfolio:django_forms' %}" method="post" autocomplete="off" novalidate="">
                     {% crispy form form.helper %}
                 </form>
             </div><!-- col-md-12 -->
