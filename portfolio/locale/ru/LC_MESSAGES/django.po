@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-06 09:55+0000\n"
+"POT-Creation-Date: 2017-03-09 17:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,41 +32,64 @@ msgstr "Тема письма"
 msgid "Message..."
 msgstr "Ваше сообщение"
 
+#: templates/404.html:4 templates/404.html:9
+msgid "Page not found"
+msgstr ""
+
+#: templates/500.html:4 templates/500.html:8
+msgid "Server Error (500)"
+msgstr ""
+
 #: templates/base.html:53 templates/base.html:92
 msgid "My portfolio site"
 msgstr "Мой портфолио сайт"
 
-#: templates/base.html:58 templates/portfolio/contact.html:8
+#: templates/base.html:58 templates/portfolio/contact.html:9
+#: templates/portfolio/django_forms.html:9 templates/portfolio/thanks.html:8
 msgid "Home"
 msgstr "Главная"
 
-#: templates/base.html:59 templates/portfolio/contact.html:9
+#: templates/base.html:59 templates/portfolio/contact.html:10
+#: templates/portfolio/django_forms.html:10 templates/portfolio/thanks.html:9
 msgid "Forms"
 msgstr "Формы"
 
-#: templates/base.html:60 templates/portfolio/contact.html:10
+#: templates/base.html:60 templates/portfolio/contact.html:11
+#: templates/portfolio/django_forms.html:11 templates/portfolio/thanks.html:10
 msgid "Contact"
 msgstr "Контакты"
 
 #: templates/base.html:76
 msgid "Change"
-msgstr ""
+msgstr "Сменить"
 
-#: templates/portfolio/contact.html:5
+#: templates/portfolio/contact.html:6
 msgid "Send me your letter."
 msgstr "Пошлите мне письмо"
 
-#: templates/portfolio/contact.html:18
-msgid "To send me a letter fill the form."
-msgstr "Чтобы послать мне письмо заполните форму."
+#: templates/portfolio/contact.html:19
+#, fuzzy
+#| msgid "To send me a letter fill the form."
+msgid "To send a letter fill the form."
+msgstr "Чтобы послать письмо заполните форму."
 
-#: templates/portfolio/contact.html:37
-msgid "Submit"
-msgstr "Отправить письмо"
+#: templates/portfolio/contact.html:26
+msgid "Send"
+msgstr "Послать"
 
-#: templates/portfolio/contact.html:40
+#: templates/portfolio/contact.html:29
 msgid "Reset"
 msgstr "Очистить"
+
+#: templates/portfolio/django_forms.html:6
+msgid "All Django form fields."
+msgstr "Все поля Django для форм"
+
+#: templates/portfolio/django_forms.html:18
+msgid ""
+"This is a set of Django form fields. It is based on Bootstrap3. Use it to "
+"try how your forms behave and look like."
+msgstr "Это набор полей Django для форм. Отображается в стиле Bootstrap3. Пригодится для того чтобы посмотреть как они выглядят и ведут себя."
 
 #: templates/portfolio/home_page.html:9
 msgid "Hello, world!"
@@ -100,6 +123,6 @@ msgstr "Написать письмо"
 msgid "Thank you for your email."
 msgstr "Спасибо за Ваше сообщение."
 
-#: templates/portfolio/thanks.html:13
+#: templates/portfolio/thanks.html:19
 msgid "Thank you for your email. I will answer as soon as possible."
 msgstr "Спасибо за Ваше письмо. Я отвечу как можно быстрее."
