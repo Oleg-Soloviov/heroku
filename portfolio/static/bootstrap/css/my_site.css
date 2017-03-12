@@ -82,6 +82,7 @@ div.jumbotron a.email_me:hover {
 
 #id_message:focus {
     background-color: #090757;
+    color:white;
 }
 
 #contact_form button {
