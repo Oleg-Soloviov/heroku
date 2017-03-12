@@ -60,6 +60,9 @@ div.jumbotron a.email_me:hover {
     color: gold;
 }
 
+/* home page short descriptions */
+#my_header_items div:nth-child(1) {
+}
 
 /*     contact form    */
 
@@ -69,7 +72,6 @@ div.jumbotron a.email_me:hover {
     color: white;
     background-color: #632216;
     padding: 5px;
-//    border: 1px solid gold;
     border-radius: 4px;
     outline: none;
     font-size: larger;
@@ -107,25 +109,7 @@ div.jumbotron a.email_me:hover {
     opacity: 0.8;
     border-radius: 5px;
 }
-/*
-#django_forms input, select, option {
-    background-color: #090757;
-    width: 100%;
-    opacity: 0.8
-}
 
-#id_color {
-    background-color: #090757;
-    width: 100%;
-    opacity: 0.8
-}
-
-#id_color ul {
-    background-color: #090757;
-    width: 100%;
-    opacity: 0.8
-}
-*/
 
 /*       thanks page      */
 div#thanks {
