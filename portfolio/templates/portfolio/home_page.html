@@ -8,7 +8,7 @@
       <div class="container">
         <h1>{% block header %}{% trans "Hello, world!" %}{% endblock header %}</h1>
         <p>{% trans "I am a web developer: Python, Django, HTML, CSS, JavaScript, Bootstrap, SQL, PostgreSQL, MySQL, Linux&nbsp;(Debian,&nbsp;Ubuntu), Heroku." %}</p>
-        <p>{% trans "As you can see, I am not a designer." %}</p>
+        <p>{% trans "I can create something according to your design, but I am not a designer." %} <a class="btn btn-default" href="{% url 'portfolio:my_style_homepage' %}" role="button">{% trans 'This my level' %}</a></p>
         <p>{% trans "This site is for training purposes. If you need a web developer send me a letter." %}</p>
         <p><a class="btn btn-default btn-lg email_me" href="{% url 'portfolio:contact' %}" role="button">{% trans "Send a letter" %} &raquo;</a></p>
         <p></p>

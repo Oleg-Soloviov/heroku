@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-12 10:23+0000\n"
+"POT-Creation-Date: 2017-03-12 13:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,26 +40,26 @@ msgstr ""
 msgid "Server Error (500)"
 msgstr ""
 
-#: templates/base.html:53 templates/base.html:92
+#: templates/base.html:54 templates/base.html:93
 msgid "My portfolio site"
 msgstr "Мой портфолио сайт"
 
-#: templates/base.html:58 templates/portfolio/contact.html:9
+#: templates/base.html:59 templates/portfolio/contact.html:9
 #: templates/portfolio/django_forms.html:9 templates/portfolio/thanks.html:8
 msgid "Home"
 msgstr "Главная"
 
-#: templates/base.html:59 templates/portfolio/contact.html:10
+#: templates/base.html:60 templates/portfolio/contact.html:10
 #: templates/portfolio/django_forms.html:10 templates/portfolio/thanks.html:9
 msgid "Forms"
 msgstr "Формы"
 
-#: templates/base.html:60 templates/portfolio/contact.html:11
+#: templates/base.html:61 templates/portfolio/contact.html:11
 #: templates/portfolio/django_forms.html:11 templates/portfolio/thanks.html:10
 msgid "Contact"
 msgstr "Контакты"
 
-#: templates/base.html:76
+#: templates/base.html:77
 msgid "Change"
 msgstr "Сменить"
 
@@ -94,10 +94,12 @@ msgstr ""
 "для того чтобы посмотреть как они выглядят и ведут себя."
 
 #: templates/portfolio/home_page.html:9
+#: templates/portfolio/my_style_home_page.html:13
 msgid "Hello, world!"
 msgstr ""
 
 #: templates/portfolio/home_page.html:10
+#: templates/portfolio/my_style_home_page.html:14
 msgid ""
 "I am a web developer: Python, Django, HTML, CSS, JavaScript, Bootstrap, SQL, "
 "PostgreSQL, MySQL, Linux&nbsp;(Debian,&nbsp;Ubuntu), Heroku."
@@ -106,10 +108,16 @@ msgstr ""
 "SQL, PostgreSQL, MySQL, Linux&nbsp;(Debian,&nbsp;Ubuntu), Heroku."
 
 #: templates/portfolio/home_page.html:11
-msgid "As you can see, I am not a designer."
-msgstr "Как Вы уже заметили, я не дизайнер."
+msgid ""
+"I can create something according to your design, but I am not a designer."
+msgstr "Я могу создать что-то по вашему дизайну, но я не дизайнер."
+
+#: templates/portfolio/home_page.html:11
+msgid "This my level"
+msgstr "Это мой уровень"
 
 #: templates/portfolio/home_page.html:12
+#: templates/portfolio/my_style_home_page.html:16
 msgid ""
 "This site is for training purposes. If you need a web developer send me a "
 "letter."
@@ -118,14 +126,17 @@ msgstr ""
 "то напишите мне."
 
 #: templates/portfolio/home_page.html:13
+#: templates/portfolio/my_style_home_page.html:17
 msgid "Send a letter"
 msgstr "Написать письмо"
 
 #: templates/portfolio/home_page.html:22
+#: templates/portfolio/my_style_home_page.html:26
 msgid "Django form fields."
 msgstr "Поля Django"
 
 #: templates/portfolio/home_page.html:23
+#: templates/portfolio/my_style_home_page.html:27
 msgid ""
 "The Django forms library comes with a set of Field classes that represent "
 "common validation needs."
@@ -134,8 +145,17 @@ msgstr ""
 "случаи проверки (валидации) полей."
 
 #: templates/portfolio/home_page.html:24
+#: templates/portfolio/my_style_home_page.html:28
 msgid "View details"
 msgstr "Подробности"
+
+#: templates/portfolio/my_style_home_page.html:15
+msgid "This is my level as a designer."
+msgstr "Это мой уровень как дизайнера."
+
+#: templates/portfolio/my_style_home_page.html:15
+msgid "Back to Bootstrap style"
+msgstr "Вернуться к стилю Bootstrap"
 
 #: templates/portfolio/thanks.html:5
 msgid "Thank you for your email."

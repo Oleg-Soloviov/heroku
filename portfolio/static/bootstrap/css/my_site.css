@@ -7,3 +7,9 @@ body {
 .my_brand {
     background-color: deepskyblue;
 }
+
+/*       thanks page      */
+div#thanks {
+    margin-top: 10%;
+    margin-bottom: 90%;
+}

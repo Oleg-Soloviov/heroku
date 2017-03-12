@@ -28,20 +28,21 @@
     <link href="{% static 'bootstrap/assets/css/ie10-viewport-bug-workaround.css' %}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
+    {% block my_css_and_js %}
     <link href="{% static 'bootstrap/css/my_site.css' %}" rel="stylesheet">
-
+    {% endblock %}
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    {% block my_css_and_js %}{% endblock %}
+    
   </head>
 
   <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top my_navbar">
+    <nav class="navbar navbar-default navbar-fixed-top" id="my_navbar">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
