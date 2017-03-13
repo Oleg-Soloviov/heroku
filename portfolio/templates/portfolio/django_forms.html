@@ -14,8 +14,14 @@
 {% block main_container %}
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3 jumbotron">
-                <h3>{% trans 'This is a set of Django form fields. It is based on Bootstrap3. Use it to try how your forms behave and look like.' %}</h3>
+            <div class="col-md-8 col-md-offset-2 jumbotron">
+                <h3>{% trans 'This is a full set of Django form fields. Use it to try how your forms behave and look like.' %}</h3>
+            </div>
+            <div class="col-md-8 col-md-offset-2">
+                <p>
+                    &quot;{% trans 'If your form includes a URLField, an EmailField or any integer field type, Django will use the url, email and number HTML5 input types. By default, browsers may apply their own validation on these fields, which may be stricter than Django’s validation. If you would like to disable this behavior, set the novalidate attribute on the form tag, or specify a different widget on the field, like TextInput.' %}&quot; (<a href="https://docs.djangoproject.com/en/1.10/topics/forms/#working-with-forms" target="_blank">Django Documentation <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a>)
+                </p>
+                <hr />
             </div>
         </div>
         <div class="row">
