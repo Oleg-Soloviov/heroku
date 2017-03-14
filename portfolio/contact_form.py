@@ -8,8 +8,6 @@ class ContactForm(forms.Form):
     subject = forms.CharField(widget=forms.TextInput(attrs={'placeholder': _('Subject..'),}))
     message = forms.CharField(widget=forms.Textarea(attrs={'placeholder': _('Message...')}))
     
-    error_css_class = 'error'
-    
     def send_email(self):
         return requests.post(
             "https://api.mailgun.net/v3/sandbox075b55521f59465c82d4d87856d6f43c.mailgun.org/messages",
@@ -18,7 +16,3 @@ class ContactForm(forms.Form):
                   "to": "Oleg <osoloviov@list.ru>",
                   "subject": self.cleaned_data['subject'],
                   "text": self.cleaned_data['message']})
-
-
-
-#~ HTML5 input types and browser validation

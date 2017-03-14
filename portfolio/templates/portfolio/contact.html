@@ -20,7 +20,7 @@
                     <form id="contact_form" action="{% url 'portfolio:contact' %}" method="post" autocomplete="off" novalidate="">
                         {% csrf_token %}
                         <div class="form-group">
-                        {{ form|crispy }}
+                        {{ form | crispy }}
                         </div>
                         <div class="form-group">
                             <button class="btn btn-primary btn-block" type="submit">{% trans "Send"%}</button>
