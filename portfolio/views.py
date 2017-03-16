@@ -24,21 +24,22 @@ class AllDjangoFieldsView(FormView):
 
 
 
-def django_fields(request):
+def django_fields(request, fields):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
-        textinputform = TextInputFieldsForm(request.POST)
-        textbaseinputform = TextBasedInputFieldsForm(request.POST)
-        # check whether it's valid:
-        if textinputform.is_valid():
-            pass
-        if textbaseinputform.is_valid():
-            pass
+        if fields == "text_input":
+            form = TextInputFieldsForm(request.POST)
+            form.is_valid()
+        elif fields == "text_base_input":
+            form = TextBasedInputFieldsForm(request.POST)
+            form.is_valid()
 
     # if a GET (or any other method) we'll create a blank form
     else:
-        textinputform = TextInputFieldsForm()
-        textbaseinputform = TextBasedInputFieldsForm()
+        if fields == "text_input":
+            form = TextInputFieldsForm()
+        elif fields == "text_base_input":
+            form = TextBasedInputFieldsForm()
 
-    return render(request, 'portfolio/django_forms.html', {'textinputform': textinputform, 'textbaseinputform': textbaseinputform})
+    return render(request, 'portfolio/django_forms.html', {'form': form})

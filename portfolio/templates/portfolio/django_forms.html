@@ -15,29 +15,36 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h3>{% trans 'This is a full set of Django form fields. Use it to try how your forms behave and look like.' %}</h3>
-                <hr />
+                <h4 class="text-success">A full set of Django form fields</h4>
             </div>
+            <div id="django_forms" class="col-md-8 col-md-offset-2">
+                  <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#textinput" aria-controls="home" role="tab" data-toggle="tab">{% trans "TextInput fields." %}</a></li>
+                    <li role="presentation"><a href="#html5inputtypes" aria-controls="profile" role="tab" data-toggle="tab">{% trans "HTML5 input types." %}</a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+                </ul>
+                  <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="textinput">
+                        <h4 class='text-primary'>{% trans "TextInput based fields." %}</h4>
+                        <p>{% trans "These Django fields use <strong>TextInput</strong> as a default widget, so browsers will not apply their own validation on these fields. Try to input the wrong value and submit the form - browser validation will not warn you  about an error and you will get a Django validation error." %}</p>
+                        <form id="django_fields_form" action="{% url 'portfolio:django_forms' %}" method="post" autocomplete="off" novalidate="">
+                            {% crispy textinputform %}
+                        </form>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="html5inputtypes">
+                        <h4 class='text-primary'>{% trans "HTML5 input types." %}</h4>
+                        <p>&quot;{% trans "If your form includes an URLField, an EmailField or any integer field type, Django will use the url, email and number HTML5 input types. By default, browsers may apply their own validation on these fields, which may be stricter than Django’s validation. If you would like to disable this behavior, set the <strong>novalidate</strong> attribute on the form tag, or specify a different widget on the field, like TextInput" %}&quot; (<a href='https://docs.djangoproject.com/en/1.10/topics/forms/#working-with-forms' target='_blank'>Django Documentation <span class='glyphicon glyphicon-new-window' aria-hidden='true'></span></a>)</p>
+                        <p>{% trans "Browsers apply their own validation on these fields. For any integer field <strong>Field.localize</strong> must be <strong>False</strong>. Try to input the wrong value and submit the form - browser validation will warn you about an error in the first wrong field." %}</p>
+                        <form id="django_fields_form" action="{% url 'portfolio:django_forms' %}" method="post" autocomplete="off">
+                            {% crispy textbaseinputform %}
+                        </form>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="messages">...</div>
+                    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+                </div><!-- tab-content -->
+            </div><!-- col-md-12 -->
         </div>
-        <div class="row">
-            <div id="django_forms" class="col-md-6 col-md-offset-3">
-                <h4 class='text-primary'>{% trans "TextInput based fields." %}</h4>
-                <p>{% trans "These Django fields use <strong>TextInput</strong> as a default widget, so browsers will not apply their own validation on these fields. Try to input the wrong value and submit the form - browser validation will not warn you  about an error and you will get a Django validation error." %}</p>
-                <form id="django_fields_form" action="{% url 'portfolio:django_forms' %}" method="post" autocomplete="off" novalidate="">
-                    {% crispy textinputform %}
-                </form>
-            </div><!-- col-md-12 -->
-        </div><!-- row -->
-        <div class="row">
-            <div id="django_forms" class="col-md-6 col-md-offset-3">
-                <hr />
-                <h4 class='text-primary'>{% trans "HTML5 input types." %}</h4>
-                <p>&quot;{% trans "If your form includes an URLField, an EmailField or any integer field type, Django will use the url, email and number HTML5 input types. By default, browsers may apply their own validation on these fields, which may be stricter than Django’s validation. If you would like to disable this behavior, set the <strong>novalidate</strong> attribute on the form tag, or specify a different widget on the field, like TextInput" %}&quot; (<a href='https://docs.djangoproject.com/en/1.10/topics/forms/#working-with-forms' target='_blank'>Django Documentation <span class='glyphicon glyphicon-new-window' aria-hidden='true'></span></a>)</p>
-                <p>{% trans "Browsers apply their own validation on these fields. For any integer field <strong>Field.localize</strong> must be <strong>False</strong>). Try to input the wrong value and submit the form - browser validation will warn you about an error in the first wrong field." %}</p>
-                <form id="django_fields_form" action="{% url 'portfolio:django_forms' %}" method="post" autocomplete="off">
-                    {% crispy textbaseinputform %}
-                </form>
-            </div><!-- col-md-12 -->
-        </div><!-- row -->
     </div><!-- container-->
 {% endblock main_container %}

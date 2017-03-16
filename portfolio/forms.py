@@ -20,7 +20,7 @@ class TextInputFieldsForm(forms.Form):
     """
     These fields Django renders as: input type='text'.
     """
-    your_name = forms.CharField(label='CharField', max_length=100, required=False)
+    your_name = forms.CharField(label='CharField', max_length=100, required=True)
     my_duration = forms.DurationField(label='DurationField', help_text=' a string which can be converted into a timedelta: DD HH:MM:SS', required=False)
     ip = forms.GenericIPAddressField(label='GenericIPAddressField', required=False)
     my_regex = forms.RegexField(label='RegexField', regex='foo', required=False)
@@ -36,7 +36,7 @@ class TextInputFieldsForm(forms.Form):
         self.helper.form_action = 'textinput_form'
         
         self.helper.layout = Layout(
-            PrependedText('your_name', 'CharField'),
+            PrependedText('your_name', 'CharField', placeholder="required"),
             PrependedText('my_slug', 'SlugField', placeholder="only letters, numbers, underscores, and hyphens"),
             PrependedText('my_time', 'TimeField', placeholder="14:30:59 or 14:30"),
             PrependedText('ip', 'GenericIPAddressField', placeholder="127.0.0.1"),
@@ -57,7 +57,7 @@ class TextBasedInputFieldsForm(forms.Form):
     """
     my_url = forms.URLField(min_length=3, required=False)
     my_email = forms.EmailField(label='EmailField', min_length=6, required=False)
-    integer = forms.IntegerField(label='IntegerField', localize=False, max_value=100, min_value=10, required=False)
+    integer = forms.IntegerField(label='IntegerField', localize=False, max_value=100, min_value=10, required=True)
     my_float = forms.FloatField(label='FloatField', localize=False, min_value=1.44, max_value=3.14, required=False)
     my_decimal = forms.DecimalField(label='DecimalField', max_digits=6, decimal_places=2, localize=False, required=False)
     
@@ -71,7 +71,7 @@ class TextBasedInputFieldsForm(forms.Form):
         self.helper.layout = Layout(
             PrependedText('my_url', 'URLField', placeholder="valid URL"),
             PrependedText('my_email', 'EmailField', placeholder="valid Email"),
-            PrependedText('integer', 'IntegerField', placeholder="integer between 10 and 100"),
+            PrependedText('integer', 'IntegerField', placeholder="integer between 10 and 100 - required"),
             PrependedText('my_float', 'FloatField', placeholder="float between 1.44 and 3.14"),
             PrependedText('my_decimal', 'DecimalField', placeholder="digits: 6, decimal places: 2 == 1234.56"),
             FormActions(
