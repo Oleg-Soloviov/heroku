@@ -57,7 +57,7 @@
           <ul class="nav navbar-nav">
               {% block nav_items %}
                 <li class="active"><a href="{% url 'portfolio:home' %}">{% trans "Home" %}</a></li>
-                <li><a href="{% url 'portfolio:django_forms' %}">{% trans "Forms" %}</a></li>
+                <li><a href="{% url 'portfolio:django_forms' 'text-input'%}">{% trans "Forms" %}</a></li>
                 <li><a href="{% url 'portfolio:contact' %}">{% trans "Contact" %}</a></li>
               {% endblock nav_items %}
           </ul>
