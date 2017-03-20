@@ -1,4 +1,3 @@
 *.pyc
-*.mo
 .env
 db.sqlite3
