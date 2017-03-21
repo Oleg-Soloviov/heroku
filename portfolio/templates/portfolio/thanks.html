@@ -4,12 +4,6 @@
 
 {% block title %}{% trans "Thank you for your email." %}{% endblock %}
 
-{% block nav_items %}
-    <li><a href="{% url 'portfolio:home' %}">{% trans "Home" %}</a></li>
-    <li><a href="{% url 'portfolio:django_forms' 'text_input' %}">{% trans "Forms" %}</a></li>
-    <li><a href="{% url 'portfolio:contact' %}">{% trans "Contact" %}</a></li>
-{% endblock nav_items %}
-
 {% block main_container %}
     <div class="container">
         <div class="row">
