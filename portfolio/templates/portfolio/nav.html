@@ -2,4 +2,4 @@
                 <li {% if 'home' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:home' %}">{% trans "Home" %}</a></li>
                 <li {% if 'text-input' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:django_forms' 'text-input'%}">{% trans "Forms" %}</a></li>
                 <li {% if 'contact' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:contact' %}">{% trans "Contact" %}</a></li>
-{#                <li {% if 'css3' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:css3' %}">CSS3</a></li>#}
+                <li {% if 'css3' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:css3' %}">CSS3</a></li>
