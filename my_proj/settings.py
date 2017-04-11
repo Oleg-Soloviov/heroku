@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     'crispy_forms',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -145,4 +146,29 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
+################ crispy forms ##########################
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+###################### TinyMCE ########################
+TINYMCE_JS_URL = STATIC_URL+'tiny_mce/tiny_mce_src.js'
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins': "table,spellchecker,paste,searchreplace,advhr,emotions,inlinepopups,style,preview,insertdate,inserttime,zoom,formats",
+    'theme': "advanced",
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 10,
+    'theme_advanced_buttons1_add' : "separator,insertdate,inserttime,preview,zoom,separator,forecolor,backcolor",
+    'theme_advanced_buttons2_add' : "hr,removeformat,visualaid,separator,sub,sup,separator,charmap,advhr,emotions,styleprops",
+    'theme_advanced_buttons3' : "",
+    
+    'style_formats' : [
+        {'title' : 'Bold text', 'inline' : 'b'},
+        {'title' : 'Red text', 'inline' : 'span', 'styles' : {'color' : '#ff0000'}},
+        {'title' : 'Red header', 'block' : 'h1', 'styles' : {'color' : '#ff0000'}},
+        {'title' : 'Table row 1', 'selector' : 'tr', 'classes' : 'tablerow1'}
+    ]
+
+}
+
+TINYMCE_SPELLCHECKER = True
+TINYMCE_COMPRESSOR = True
+

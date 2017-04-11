@@ -3,6 +3,8 @@ from django.shortcuts import render
 from django.views.generic.edit import FormView
 from portfolio.contact_form import ContactForm
 from .forms import ChoiceDjangoFieldsForm, TextInputFieldsForm, TextBasedInputFieldsForm, DateTimeDjangoFieldsForm
+from tinymce.widgets import TinyMCE
+
 
 
 class ContactView(FormView):
@@ -13,16 +15,6 @@ class ContactView(FormView):
     def form_valid(self, form):
         form.send_email()
         return super(ContactView, self).form_valid(form)
-
-
-#~ class AllDjangoFieldsView(FormView):
-    #~ template_name = 'portfolio/django_forms.html'
-    #~ form_class = AllDjangoFieldsForm
-    #~ success_url = reverse_lazy('portfolio:django_forms')
-
-
-
-
 
 def django_fields(request, fields):
     # if this is a POST request we need to process the form data

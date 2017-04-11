@@ -1,3 +1,7 @@
+"""
+Django fields forms
+"""
+
 import os
 
 from django import forms
