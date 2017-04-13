@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-13 17:22+0000\n"
+"POT-Creation-Date: 2017-04-13 17:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -278,6 +278,7 @@ msgstr ""
 #: templates/portfolio/css3.html:11 templates/portfolio/home_page.html:24
 #: templates/portfolio/home_page.html:29
 #: templates/portfolio/my_style_home_page.html:28
+#: templates/portfolio/my_style_home_page.html:33
 msgid "View details"
 msgstr "Подробности"
 
@@ -359,10 +360,9 @@ msgid ""
 "common word processor features found in desktop editing applications like "
 "Microsoft Word and OpenOffice."
 msgstr ""
-"Это браузерные WYSIWYG редакторы контента. Они "
-"воплощают онлайн основные черты &quot;больших&quot; десктопных "
-"приложений для редактирования текста, таких как Microsoft Word и OpenOffice."
-"</p>"
+"Это браузерные WYSIWYG редакторы контента. Они воплощают онлайн основные "
+"черты &quot;больших&quot; десктопных приложений для редактирования текста, "
+"таких как Microsoft Word и OpenOffice.</p>"
 
 #: templates/portfolio/my_style_home_page.html:15
 msgid "This is my level as a designer."
@@ -395,4 +395,3 @@ msgstr "Спасибо за Ваше сообщение."
 #: templates/portfolio/thanks.html:13
 msgid "Thank you for your email. I will answer as soon as possible."
 msgstr "Спасибо за Ваше письмо. Я отвечу как можно быстрее."
-
