@@ -19,7 +19,9 @@
 {% if 'django-tinymce' in request.resolver_match.args %}
     {{ form.media }}
 {% elif 'ckeditor' in request.resolver_match.args %}
+<!--
     <script src="{% static '/js/ckeditor/ckeditor.js' %}"></script>
+-->
 {% elif 'wysiwyg' in request.resolver_match.args %}
     {% load wysiwyg %}
     {% wysiwyg_setup %}
