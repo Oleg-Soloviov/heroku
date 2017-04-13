@@ -3,15 +3,21 @@
                 <li class="dropdown {% if 'forms' in request.path %}active{% endif %}">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans "Forms" %} <span class="caret"></span></a>
                   <ul class="dropdown-menu">
-                    <li><a href="{% url 'portfolio:django_forms' 'text-input' %}">{% trans "Django fields" %}</a></li>
+                    <li {% if 'text-input' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:django_forms' 'text-input' %}">{% trans "TextInput fields" %}</a></li>
+                    <li {% if 'date-time-fields' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:django_forms' 'date-time-fields' %}">{% trans "DateTime fields" %}</a></li>
+                    <li {% if 'html5-input-types' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:django_forms' 'html5-input-types' %}">{% trans "HTML5 input" %}</a></li>
+                    <li {% if 'choice-fields' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:django_forms' 'choice-fields' %}">{% trans "Choice fields" %}</a></li>
                     <li role="separator" class="divider"></li>
-                    <li {% if 'django-tinymce' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'django-tinymce' %}">django-tinymce</a></li>
+                    <li {% if 'django-tinymce' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'django-tinymce' %}">Django-tinymce</a></li>
                     <li {% if 'tinymce4' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'tinymce4' %}">TinyMCE 4</a></li>
-                    <li><a href="#">Something else here</a></li>
+                    <li {% if 'wysiwyg' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'wysiwyg' %}">{% trans "Django WYSIWYG" %}</a></li>
+                    <li {% if 'ckeditor' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'ckeditor' %}">{% trans "CKEditor" %}</a></li>
+<!--
                     <li role="separator" class="divider"></li>
                     <li><a href="#">Separated link</a></li>
                     <li role="separator" class="divider"></li>
                     <li><a href="#">One more separated link</a></li>
+-->
                   </ul>
                 </li>
                 <li {% if 'contact' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:contact' %}">{% trans "Contact" %}</a></li>

@@ -3,36 +3,52 @@
 {% load i18n %}
 {% load crispy_forms_tags %}
 
-{% block title %}{% trans "TinyMCE editor" %}{% endblock %}
+{% block title %}
+{% if 'django-tinymce' in request.resolver_match.args %}
+    Django-tinymce
+{% elif 'tinymce4' in request.resolver_match.args %}
+    TinyMCE 4
+{% elif 'wysiwyg' in request.resolver_match.args %}
+    Django WYSIWYG
+{% elif 'ckeditor' in request.resolver_match.args %}
+    CKEditor
+{% endif %}
+{% endblock %}
 
 {% block my_css_and_js %}
-{% if 'django-tinymce' in request.resolver_match.args %}{{ form.media }}
+{% if 'django-tinymce' in request.resolver_match.args %}
+    {{ form.media }}
+{% elif 'ckeditor' in request.resolver_match.args %}
+    <script src="{% static '/js/ckeditor/ckeditor.js' %}"></script>
+{% elif 'wysiwyg' in request.resolver_match.args %}
+    {% load wysiwyg %}
+    {% wysiwyg_setup %}
 {% elif 'tinymce4' in request.resolver_match.args %}
-<script src="{% static '/js/tinymce/tinymce.min.js' %}"></script>
-<script>
-tinymce.init({
-  selector: 'textarea',
-  height: 300,
-  theme: 'modern',
-  plugins: [
-    'advlist autolink lists link image charmap print preview hr anchor pagebreak',
-    'searchreplace wordcount visualblocks visualchars code fullscreen',
-    'insertdatetime media nonbreaking save table contextmenu directionality',
-    'emoticons template paste textcolor colorpicker textpattern imagetools codesample toc'
-  ],
-  toolbar1: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
-  toolbar2: 'print preview media | forecolor backcolor emoticons | codesample',
-  image_advtab: true,
-  templates: [
-    { title: 'Test template 1', content: 'Test 1' },
-    { title: 'Test template 2', content: 'Test 2' }
-  ],
-  content_css: [
-    '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
-    '//www.tinymce.com/css/codepen.min.css'
-  ]
- });
-</script>
+    <script src="{% static '/js/tinymce/tinymce.min.js' %}"></script>
+    <script>
+    tinymce.init({
+      selector: 'textarea',
+      height: 300,
+      theme: 'modern',
+      plugins: [
+        'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+        'searchreplace wordcount visualblocks visualchars code fullscreen',
+        'insertdatetime media nonbreaking save table contextmenu directionality',
+        'emoticons template paste textcolor colorpicker textpattern imagetools codesample toc'
+      ],
+      toolbar1: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+      toolbar2: 'print preview media | forecolor backcolor emoticons | codesample',
+      image_advtab: true,
+      templates: [
+        { title: 'Test template 1', content: 'Test 1' },
+        { title: 'Test template 2', content: 'Test 2' }
+      ],
+      content_css: [
+        '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+        '//www.tinymce.com/css/codepen.min.css'
+      ]
+     });
+    </script>
 {% endif %}
 {% endblock %}
 
@@ -44,13 +60,20 @@ tinymce.init({
             </div>
             <div id="django_forms" class="col-md-8 col-md-offset-2">
                 <ul class="nav nav-tabs nav-justified" role="tablist">
-                    <li role="presentation" {% if 'django-tinymce' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'django-tinymce' %}">{% trans "django-tinymce" %}</a></li>
-                    <li role="presentation" {% if 'tinymce4' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'tinymce4' %}">{% trans "TinyMCE 4" %}</a></li>
-                    <li role="presentation" {% if 'html5-input-types' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:django_forms' 'html5-input-types' %}">{% trans "HTML5 input" %}</a></li>
-                    <li role="presentation" {% if 'choice-fields' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:django_forms' 'choice-fields' %}">{% trans "Choice fields" %}</a></li>
+                    <li role="presentation" {% if 'django-tinymce' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'django-tinymce' %}">Django-tinymce</a></li>
+                    <li role="presentation" {% if 'tinymce4' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'tinymce4' %}">TinyMCE 4</a></li>
+                    <li role="presentation" {% if 'wysiwyg' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'wysiwyg' %}">Django WYSIWYG</a></li>
+                    <li role="presentation" {% if 'ckeditor' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'ckeditor' %}">CKEditor</a></li>
                 </ul>
                 <div>
                     {% crispy form %}
+                    {% if 'wysiwyg' in request.resolver_match.args %}
+                        {% wysiwyg_editor "id_content" %}
+                    {% elif 'ckeditor' in request.resolver_match.args %}
+                        <script>
+                            CKEDITOR.replace( 'id_content' );
+                        </script>
+                    {% endif %}
                 </div>
             </div><!-- col-md-12 -->
         </div>

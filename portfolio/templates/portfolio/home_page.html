@@ -19,14 +19,14 @@
       <!-- Example row of columns -->
       <div class="row" id="my_header_items">
         <div class="col-md-4">
-          <h2>{% trans 'Django form fields.' %}</h2>
+          <h2>{% trans 'Django form fields' %}</h2>
           <p>{% trans 'The Django forms library comes with a set of Field classes that represent common validation needs.' %}</p>
           <p><a class="btn btn-default" href="{% url 'portfolio:django_forms' 'text-input' %}" role="button">{% trans 'View details' %} &raquo;</a></p>
         </div>
         <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2>{% trans 'Rich text editors' %}</h2>
+          <p>These are browser-based WYSIWYG content editors. This means the content being edited in them looks as similar as possible to the results end users will see after it has been published. It brings to the web common word processor features found in desktop editing applications like Microsoft Word and OpenOffice.</p>
+          <p><a class="btn btn-default" href="{% url 'portfolio:tinymce' 'django-tinymce' %}" role="button">View details &raquo;</a></p>
        </div>
         <div class="col-md-4">
           <h2>Heading</h2>
