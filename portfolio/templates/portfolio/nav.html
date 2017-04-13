@@ -10,8 +10,8 @@
                     <li role="separator" class="divider"></li>
                     <li {% if 'django-tinymce' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'django-tinymce' %}">Django-tinymce</a></li>
                     <li {% if 'tinymce4' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'tinymce4' %}">TinyMCE 4</a></li>
-                    <li {% if 'wysiwyg' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'wysiwyg' %}">{% trans "Django WYSIWYG" %}</a></li>
-                    <li {% if 'ckeditor' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'ckeditor' %}">{% trans "CKEditor" %}</a></li>
+                    <li {% if 'wysiwyg' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'wysiwyg' %}">Nicedit</a></li>
+                    <li {% if 'ckeditor' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'ckeditor' %}">CKEditor</a></li>
 <!--
                     <li role="separator" class="divider"></li>
                     <li><a href="#">Separated link</a></li>

@@ -51,7 +51,7 @@ class DjWysiwygForm(forms.Form):
         self.helper.form_action = reverse('portfolio:tinymce', args=('wysiwig',))
         
         self.helper.layout = Layout(
-            HTML(_("<h4>Django WYSIWYG.</h4><p>This is a Django application for easily converting HTML textareas into rich HTML editors that meet US Government 508/WAC standards. Can be used with different editors. The default is the YAHOO editor.</p>")),
+            HTML(_("<h4>NicEdit.</h4><p>NicEdit is a Lightweight, Cross Platform, Inline Content Editor to allow easy editing of web site content on the fly in the browser.</p>")),
             'content',
             )
 

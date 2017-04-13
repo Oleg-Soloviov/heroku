@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-13 06:03+0000\n"
+"POT-Creation-Date: 2017-04-13 16:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -65,15 +65,13 @@ msgstr ""
 
 #: editors_forms.py:54
 msgid ""
-"<h4>Django WYSIWYG.</h4><p>This is a Django application for easily "
-"converting HTML textareas into rich HTML editors that meet US Government 508/"
-"WAC standards. Can be used with different editors. The default is the YAHOO "
-"editor.</p>"
+"<h4>NicEdit.</h4><p>NicEdit is a Lightweight, Cross Platform, Inline Content "
+"Editor to allow easy editing of web site content on the fly in the browser.</"
+"p>"
 msgstr ""
-"<h4>Django WYSIWYG.</h4><p>Это приложение Django для быстрого и легкого "
-"превращения HTML textarea полей в HTML редактор форматированного текста,  "
-"отвечающий требованиям стандарта 508/WAC правительства США. Поддерживаются "
-"несколько разных редакторов. Редактор YAHOO установлен по умолчанию.</p>"
+"<h4>NicEdit.</h4><p>NicEdit это легкий, межплатформенный онлайн редактор, "
+"который позволяет легко редактировать содержимое вебсайта прямо в браузере.</"
+"p>"
 
 #: editors_forms.py:69
 msgid ""
@@ -306,10 +304,6 @@ msgstr "HTML5 поля"
 msgid "Choice fields"
 msgstr "Поля выбора"
 
-#: templates/portfolio/editor_forms.html:6
-msgid "TinyMCE editor"
-msgstr "Редактор TinyMCE"
-
 #: templates/portfolio/home_page.html:9
 #: templates/portfolio/my_style_home_page.html:13
 msgid "Hello, world!"
@@ -377,14 +371,6 @@ msgstr "Формы"
 msgid "DateTime fields"
 msgstr "Поля выбора"
 
-#: templates/portfolio/nav.html:13
-msgid "Django WYSIWYG"
-msgstr ""
-
-#: templates/portfolio/nav.html:14
-msgid "CKEditor"
-msgstr ""
-
 #: templates/portfolio/nav.html:23
 msgid "Contact"
 msgstr "Контакты"
@@ -396,3 +382,18 @@ msgstr "Спасибо за Ваше сообщение."
 #: templates/portfolio/thanks.html:13
 msgid "Thank you for your email. I will answer as soon as possible."
 msgstr "Спасибо за Ваше письмо. Я отвечу как можно быстрее."
+
+#~ msgid ""
+#~ "<h4>Django WYSIWYG.</h4><p>This is a Django application for easily "
+#~ "converting HTML textareas into rich HTML editors that meet US Government "
+#~ "508/WAC standards. Can be used with different editors. The default is the "
+#~ "YAHOO editor.</p>"
+#~ msgstr ""
+#~ "<h4>Django WYSIWYG.</h4><p>Это приложение Django для быстрого и легкого "
+#~ "превращения HTML textarea полей в HTML редактор форматированного текста,  "
+#~ "отвечающий требованиям стандарта 508/WAC правительства США. "
+#~ "Поддерживаются несколько разных редакторов. Редактор YAHOO установлен по "
+#~ "умолчанию.</p>"
+
+#~ msgid "TinyMCE editor"
+#~ msgstr "Редактор TinyMCE"
