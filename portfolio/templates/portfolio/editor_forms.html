@@ -72,9 +72,11 @@
                     {% if 'wysiwyg' in request.resolver_match.args %}
                         {% wysiwyg_editor "id_content" %}
                     {% elif 'ckeditor' in request.resolver_match.args %}
+<!--
                         <script>
                             CKEDITOR.replace( 'id_content' );
                         </script>
+-->
                     {% endif %}
                 </div>
             </div><!-- col-md-12 -->
