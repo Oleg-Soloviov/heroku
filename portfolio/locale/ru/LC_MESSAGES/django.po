@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-20 07:17+0000\n"
+"POT-Creation-Date: 2017-04-13 17:32+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,59 @@ msgstr "Тема письма"
 msgid "Message..."
 msgstr "Ваше сообщение"
 
-#: forms.py:38
+#: editors_forms.py:23
+msgid ""
+"<h4>Django-tinymce.</h4><p>&quot;Django-tinymce&quot; is a Django "
+"application that contains a widget to render a form field as a TinyMCE "
+"editor. It uses TinyMCE editor 3.5.11. Current version of TinyMCE editor is "
+"TinyMCE&nbsp;4.5.x. and you need only two scripts in HEAD section of HTML "
+"document <a href=\"{% url 'portfolio:tinymce' 'tinymce4' %}\">to convert</a> "
+"any your field in rich text editor.</p>"
+msgstr ""
+"<h4>Django-tinymce.</h4><p>&quot;Django-tinymce&quot; это приложение Django, "
+"которое содержит виджет, чтобы превратить поле формы в редактор TinyMCE. "
+"Используется версия 3.5.11 редактора TinyMCE. Текущая версия TinyMCE "
+"редактора&nbsp;-&nbsp;4.5.x. Для его установки нужно только два скрипта в "
+"разделе HEAD  HTML документа и ваше поле формы <a href=\"{% url 'portfolio:"
+"tinymce' 'tinymce4' %}\">превратится</a> в редактор форматированного текста."
+"</p>"
+
+#: editors_forms.py:38
+msgid ""
+"<h4>TinyMCE 4.</h4><p>Tiny MCE 4 is a platform independent web-based "
+"JavaScript HTML WYSIWYG editor. TinyMCE enables you to convert HTML textarea "
+"fields or other HTML elements to editor instances. Current version of "
+"TinyMCE editor is TinyMCE&nbsp;4.5.x. and you need only two scripts in HEAD "
+"section of HTML document to enable it.</p>"
+msgstr ""
+"<h4>TinyMCE 4.</h4><p>Tiny MCE 4 это платформо независимый JavaScript HTML "
+"WYSIWYG редактор для интернета. TinyMCE дает возможность превратить поле "
+"textarea в полноценный редактор. Текущая версия редактора TinyMCE&nbsp;4.5."
+"x. Чтобы использовать его нужно только два тега scripts разделе HEAD HTML "
+"документа.</p>"
+
+#: editors_forms.py:54
+msgid ""
+"<h4>NicEdit.</h4><p>NicEdit is a Lightweight, Cross Platform, Inline Content "
+"Editor to allow easy editing of web site content on the fly in the browser.</"
+"p>"
+msgstr ""
+"<h4>NicEdit.</h4><p>NicEdit это легкий, межплатформенный онлайн редактор, "
+"который позволяет легко редактировать содержимое вебсайта прямо в браузере.</"
+"p>"
+
+#: editors_forms.py:69
+msgid ""
+"<h4>CKEditor.</h4><p>CKEditor is a browser-based WYSIWYG content editor. It "
+"brings to the web common word processor features found in desktop editing "
+"applications like Microsoft Word and OpenOffice. </p>"
+msgstr ""
+"<h4>CKEditor.</h4><p>CKEditor это браузерный WYSIWYG редактор контента. Он "
+"предоставляет для интернета основные черты &quot;больших&quot; десктопных "
+"приложений для редактирования текста, таких как Microsoft Word и OpenOffice."
+"</p>"
+
+#: forms.py:42
 msgid ""
 "<h4 class='text-primary'>TextInput based fields.</h4><p>These Django fields "
 "use <strong>TextInput</strong> as a default widget, so only <em>required</"
@@ -53,28 +105,28 @@ msgstr ""
 "href='{% url 'portfolio:django_forms' 'date-time-fields' %}'>времени и даты</"
 "a> используют <strong>TextInput</strong> виджет по умолчанию.</div></div>"
 
-#: forms.py:39
+#: forms.py:43
 msgid "any char or sign"
 msgstr "любой знак, буква или цифра"
 
-#: forms.py:40
+#: forms.py:44
 msgid "only letters, numbers, underscores, and hyphens"
 msgstr "только буквы, цифры, подчеркивание или тире"
 
-#: forms.py:42
+#: forms.py:46
 msgid "string with \"foo\" substring"
 msgstr "строка с подстрокой \"foo\""
 
-#: forms.py:46 forms.py:77 forms.py:120 forms.py:146
+#: forms.py:50 forms.py:81 forms.py:124 forms.py:150
 msgid "Submit"
 msgstr "Отправить"
 
-#: forms.py:47 forms.py:78 forms.py:121 forms.py:147
-#: templates/portfolio/contact.html:29
+#: forms.py:51 forms.py:82 forms.py:125 forms.py:151
+#: templates/portfolio/contact.html:22
 msgid "Reset"
 msgstr "Очистить"
 
-#: forms.py:70
+#: forms.py:74
 msgid ""
 "<h4 class='text-primary'>HTML5 input types.</h4><p>&quot;If your form "
 "includes an URLField, an EmailField or any integer field type, Django will "
@@ -107,27 +159,27 @@ msgstr ""
 "браузер предупредит вас об ошибке в первом по счету поле с неправильным "
 "значением.</p>"
 
-#: forms.py:71
+#: forms.py:75
 msgid "valid URL"
 msgstr "правильный URL адрес"
 
-#: forms.py:72
+#: forms.py:76
 msgid "valid Email"
 msgstr "правильный Email адрес"
 
-#: forms.py:73
+#: forms.py:77
 msgid "integer between 10 and 100 - required"
 msgstr "целое число от 10 до 100 (обязательное поле)"
 
-#: forms.py:74
+#: forms.py:78
 msgid "float between 1.44 and 3.14"
 msgstr "число от 1.44 до 3.14 "
 
-#: forms.py:75
+#: forms.py:79
 msgid "digits: 6, decimal places: 2 == 1234.56"
 msgstr "целых: 6, десятичных: 2 == 1234.56"
 
-#: forms.py:102
+#: forms.py:106
 msgid ""
 "<h4 class='text-primary'>Boolean and Choice fields.</h4><p>These Django "
 "fields let you make a choice. If you want to include a boolean in your form "
@@ -142,13 +194,13 @@ msgstr ""
 "strong> (т.е. флажок отмечен или нет), то необходимо, определяя поле "
 "<strong>BooleanField</strong> установить <strong>required=False</strong>.</p>"
 
-#: forms.py:130
+#: forms.py:134
 msgid "a string which can be converted into a timedelta: DD HH:MM:SS"
 msgstr ""
 "строка, которая может быть преобразована в <strong>timedelta</strong>: ДД ЧЧ:"
 "ММ:СС"
 
-#: forms.py:140
+#: forms.py:144
 msgid ""
 "<h4 class='text-primary'>Time and Date Django fields.</h4><p>Django uses "
 "<strong>TextInput</strong> as a default widget for date and time fields, so "
@@ -170,46 +222,31 @@ msgstr ""
 "найденное в переменной DATE(TIME)_INPUT_FORMATS модуля <strong>settings</"
 "strong> Django.</p>"
 
-#: forms.py:141
+#: forms.py:145
 msgid "14:30:59 or 14:30"
 msgstr "14:30:59 или 14:30"
 
-#: forms.py:142
+#: forms.py:146
 msgid "2006-10-25 14:30:59 (YYYY-MM-DD HH:MM:SS)"
 msgstr "2006-10-25 14:30:59 (ГГГГ-ММ-ДД ЧЧ:ММ:СС)"
 
-#: forms.py:143
+#: forms.py:147
 msgid "2017-03-19 (YYYY-MM-DD)"
 msgstr "2017-03-19 (ГГГГ-ММ-ДД)"
 
 #: templates/404.html:4 templates/404.html:13
 msgid "Page not found"
-msgstr ""
+msgstr "Страница не найдена (404)"
 
 #: templates/500.html:4 templates/500.html:11
 msgid "Server Error (500)"
-msgstr ""
+msgstr "Ошибка сервера (500)"
 
-#: templates/base.html:54 templates/base.html:93
+#: templates/base.html:53 templates/base.html:88
 msgid "My portfolio site"
 msgstr "Мой портфолио сайт"
 
-#: templates/base.html:59 templates/portfolio/contact.html:9
-#: templates/portfolio/django_forms.html:9 templates/portfolio/thanks.html:8
-msgid "Home"
-msgstr "Главная"
-
-#: templates/base.html:60 templates/portfolio/contact.html:10
-#: templates/portfolio/django_forms.html:10 templates/portfolio/thanks.html:9
-msgid "Forms"
-msgstr "Формы"
-
-#: templates/base.html:61 templates/portfolio/contact.html:11
-#: templates/portfolio/django_forms.html:11 templates/portfolio/thanks.html:10
-msgid "Contact"
-msgstr "Контакты"
-
-#: templates/base.html:77
+#: templates/base.html:72
 msgid "Change"
 msgstr "Сменить"
 
@@ -217,35 +254,55 @@ msgstr "Сменить"
 msgid "Send me your letter."
 msgstr "Пошлите мне письмо"
 
-#: templates/portfolio/contact.html:19
+#: templates/portfolio/contact.html:12
 msgid "To send a letter fill the form."
 msgstr "Чтобы послать письмо заполните форму."
 
-#: templates/portfolio/contact.html:26
+#: templates/portfolio/contact.html:19
 msgid "Send"
 msgstr "Послать"
+
+#: templates/portfolio/css3.html:9
+msgid "Django form fields."
+msgstr "Поля Django"
+
+#: templates/portfolio/css3.html:10 templates/portfolio/home_page.html:23
+#: templates/portfolio/my_style_home_page.html:27
+msgid ""
+"The Django forms library comes with a set of Field classes that represent "
+"common validation needs."
+msgstr ""
+"Django фреймворк содержит библиотеку полей HTML форм, реализующих основные "
+"случаи проверки (валидации) полей."
+
+#: templates/portfolio/css3.html:11 templates/portfolio/home_page.html:24
+#: templates/portfolio/home_page.html:29
+#: templates/portfolio/my_style_home_page.html:28
+#: templates/portfolio/my_style_home_page.html:33
+msgid "View details"
+msgstr "Подробности"
 
 #: templates/portfolio/django_forms.html:6
 msgid "All Django form fields."
 msgstr "Все поля Django для форм"
 
-#: templates/portfolio/django_forms.html:18
+#: templates/portfolio/django_forms.html:12
 msgid "A full set of Django form fields"
 msgstr "Все поля Django для форм"
 
-#: templates/portfolio/django_forms.html:23
+#: templates/portfolio/django_forms.html:17 templates/portfolio/nav.html:6
 msgid "TextInput fields"
 msgstr "Поля TextInput"
 
-#: templates/portfolio/django_forms.html:24
+#: templates/portfolio/django_forms.html:18
 msgid "Time and Date"
 msgstr "Время и Дата"
 
-#: templates/portfolio/django_forms.html:25
+#: templates/portfolio/django_forms.html:19 templates/portfolio/nav.html:8
 msgid "HTML5 input"
 msgstr "HTML5 поля"
 
-#: templates/portfolio/django_forms.html:26
+#: templates/portfolio/django_forms.html:20 templates/portfolio/nav.html:9
 msgid "Choice fields"
 msgstr "Поля выбора"
 
@@ -288,22 +345,24 @@ msgstr "Написать письмо"
 
 #: templates/portfolio/home_page.html:22
 #: templates/portfolio/my_style_home_page.html:26
-msgid "Django form fields."
+msgid "Django form fields"
 msgstr "Поля Django"
 
-#: templates/portfolio/home_page.html:23
-#: templates/portfolio/my_style_home_page.html:27
-msgid ""
-"The Django forms library comes with a set of Field classes that represent "
-"common validation needs."
-msgstr ""
-"Django фреймворк содержит библиотеку полей HTML форм, реализующих основные "
-"случаи проверки (валидации) полей."
+#: templates/portfolio/home_page.html:27
+#: templates/portfolio/my_style_home_page.html:31
+msgid "Rich text editors"
+msgstr "Редакторы текста"
 
-#: templates/portfolio/home_page.html:24
-#: templates/portfolio/my_style_home_page.html:28
-msgid "View details"
-msgstr "Подробности"
+#: templates/portfolio/home_page.html:28
+#: templates/portfolio/my_style_home_page.html:32
+msgid ""
+"These are browser-based WYSIWYG content editors. They bring to the web "
+"common word processor features found in desktop editing applications like "
+"Microsoft Word and OpenOffice."
+msgstr ""
+"Это браузерные WYSIWYG редакторы контента. Они воплощают онлайн основные "
+"черты &quot;больших&quot; десктопных приложений для редактирования текста, "
+"таких как Microsoft Word и OpenOffice.</p>"
 
 #: templates/portfolio/my_style_home_page.html:15
 msgid "This is my level as a designer."
@@ -313,10 +372,26 @@ msgstr "Это мой уровень как дизайнера."
 msgid "Back to Bootstrap style"
 msgstr "Вернуться к стилю Bootstrap"
 
+#: templates/portfolio/nav.html:2
+msgid "Home"
+msgstr "Главная"
+
+#: templates/portfolio/nav.html:4
+msgid "Forms"
+msgstr "Формы"
+
+#: templates/portfolio/nav.html:7
+msgid "DateTime fields"
+msgstr "Поля выбора"
+
+#: templates/portfolio/nav.html:23
+msgid "Contact"
+msgstr "Контакты"
+
 #: templates/portfolio/thanks.html:5
 msgid "Thank you for your email."
 msgstr "Спасибо за Ваше сообщение."
 
-#: templates/portfolio/thanks.html:19
+#: templates/portfolio/thanks.html:13
 msgid "Thank you for your email. I will answer as soon as possible."
 msgstr "Спасибо за Ваше письмо. Я отвечу как можно быстрее."
