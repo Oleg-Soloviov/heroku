@@ -34,7 +34,7 @@ if MY_ENV=='PRODUCTION':
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [".herokuapp.com",]
 
 # Application definition
 
