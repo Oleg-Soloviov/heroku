@@ -10,19 +10,16 @@
     <meta name="description" content="{% block description %}This is a portfolio site for training purposes.{% endblock %}">
     <meta name="keywords" content="{% block keywords %}web developer, portfolio{% endblock %}">
     <meta name="author" content="{% block author %}{% endblock %}">
-    <link rel="icon" href="{% static '/images/favicon.ico' %}">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}">
     <title>{% block title %}My portfolio site{% endblock %}</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{% static '/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
-    
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="{% static '/bootstrap/assets/css/ie10-viewport-bug-workaround.css' %}" rel="stylesheet">
-    
     <!-- Custom styles for this template -->
     {% block my_css_and_js %}{% endblock %}
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!--[if lt IE 10]>
-    <link href="{% static '/my_css/my_site_for_css3.css' %}" rel="stylesheet">
+    <link href="{% static '/bootstrap/assets/css/ie10-viewport-bug-workaround.css' %}" rel="stylesheet">
     <![endif]-->
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
