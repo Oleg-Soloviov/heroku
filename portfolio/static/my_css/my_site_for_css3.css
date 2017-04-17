@@ -33,7 +33,7 @@ div.jumbotron {
     margin-top: -600px;
     animation-name: jumbotron_drop_down;
     animation-duration: 2s;
-    animation-delay: 1.5s;
+    animation-delay: 1s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
 }
@@ -47,7 +47,7 @@ footer, hr, div#homepage_items > div.row > div {
     opacity: 0.0;
     animation-name: reveal_items;
     animation-duration: 1.5s;
-    animation-delay: 4s;
+    animation-delay: 3s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
