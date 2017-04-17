@@ -36,6 +36,8 @@ else:
     DEBUG = True
     ALLOWED_HOSTS = ["127.0.0.1",]
 
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 
 # Application definition
