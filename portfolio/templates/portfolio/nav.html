@@ -12,13 +12,6 @@
                     <li {% if 'tinymce4' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'tinymce4' %}">TinyMCE 4</a></li>
                     <li {% if 'wysiwyg' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'wysiwyg' %}">Nicedit</a></li>
                     <li {% if 'ckeditor' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'ckeditor' %}">CKEditor</a></li>
-<!--
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">One more separated link</a></li>
--->
                   </ul>
                 </li>
                 <li {% if 'contact' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:contact' %}">{% trans "Contact" %}</a></li>
-                <li {% if 'css3' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:css3' %}">CSS3</a></li>
