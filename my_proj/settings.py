@@ -31,7 +31,7 @@ MY_ENV = os.environ.get('DEBUG', 'False')
 
 if MY_ENV=='PRODUCTION':
     DEBUG = False
-    ALLOWED_HOSTS = ["secret-mesa-26263.herokuapp.com"]
+    ALLOWED_HOSTS = ["*"]
 else:
     DEBUG = True
     ALLOWED_HOSTS = ["127.0.0.1","secret-mesa-26263.herokuapp.com"]
