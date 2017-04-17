@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base_for_homepage.html' %}
 {% load staticfiles %}
 {% load i18n %}
 
@@ -11,13 +11,12 @@
         <p>{% trans "I can create something according to your design, but I am not a designer." %} <a class="btn btn-default" href="{% url 'portfolio:my_style_homepage' %}" role="button">{% trans 'This my level' %}</a></p>
         <p>{% trans "This site is for training purposes. If you need a web developer send me a letter." %}</p>
         <p><a class="btn btn-default btn-lg email_me" href="{% url 'portfolio:contact' %}" role="button">{% trans "Send a letter" %} &raquo;</a></p>
-        <p></p>
       </div>
     </div>
 
-    <div class="container">
+    <div class="container"  id="homepage_items">
       <!-- Example row of columns -->
-      <div class="row" id="my_header_items">
+      <div class="row">
         <div class="col-md-6">
           <h2>{% trans 'Django form fields' %}</h2>
           <p>{% trans 'The Django forms library comes with a set of Field classes that represent common validation needs.' %}</p>

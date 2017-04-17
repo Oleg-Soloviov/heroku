@@ -1,13 +1,5 @@
 {% load staticfiles %}
 {% load i18n %}
-
-<!--
-{% get_current_language as LANGUAGE_CODE %}
-{% get_language_info for LANGUAGE_CODE as current_lang %}
-{% get_available_languages as LANGUAGES %}
-{% get_language_info_list for LANGUAGES as languages %}
--->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,13 +20,16 @@
     <link href="{% static '/bootstrap/assets/css/ie10-viewport-bug-workaround.css' %}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="{% static '/my_css/my_site.css' %}" rel="stylesheet">
+    <link href="{% static '/my_css/my_site_for_css3.css' %}" rel="stylesheet">
     {% block my_css_and_js %}{% endblock %}
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 10]>
+      <link href="/static/my_css/my_site.css" rel="stylesheet">
     <![endif]-->
   </head>
 
