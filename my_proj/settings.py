@@ -31,7 +31,7 @@ MY_ENV = os.environ.get('DEBUG', 'False')
 
 if MY_ENV=='PRODUCTION':
     DEBUG = False
-    ALLOWED_HOSTS = ['secret-mesa-26263.herokuapp.com']
+    ALLOWED_HOSTS = ["secret-mesa-26263.herokuapp.com"]
 else:
     DEBUG = True
     ALLOWED_HOSTS = ["127.0.0.1","secret-mesa-26263.herokuapp.com"]
@@ -147,6 +147,7 @@ LANGUAGES = (
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
+STATICFILES_DIRS = (os.path.join(PROJECT_ROOT, 'static'),)
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
