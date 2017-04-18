@@ -1,5 +1,4 @@
 *.pyc
 .env
 db.sqlite3
-static
-
+collectstatic
