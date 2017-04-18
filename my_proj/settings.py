@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     
     'crispy_forms',
     'tinymce',
-    'django_wysiwyg',
+#    'django_wysiwyg',
 ]
 
 MIDDLEWARE = [
@@ -155,7 +155,7 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 ###################### TinyMCE ########################
-TINYMCE_JS_URL = STATIC_URL+'tiny_mce/tiny_mce_src.js'
+TINYMCE_JS_URL = os.path.join(STATIC_URL+'tiny_mce/tiny_mce_src.js')
 TINYMCE_DEFAULT_CONFIG = {
     'plugins': "table,spellchecker,paste,searchreplace,advhr,emotions,inlinepopups,style,preview,insertdate,inserttime,zoom,formats",
     'theme': "advanced",
