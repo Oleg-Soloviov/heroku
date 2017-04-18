@@ -1,0 +1,28 @@
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  min-height: 800px;
+}
+
+.my_brand {
+    background-color: deepskyblue;
+}
+
+/*       thanks page      */
+div#thanks {
+    margin-top: 10%;
+    margin-bottom: 90%;
+}
+
+body > nav {
+    margin-top: 0px;
+}
+
+div.jumbotron {
+    margin-top: 0px;
+}
+
+footer, hr, div#homepage_items > div.row > div {
+    opacity: 1;
+}
