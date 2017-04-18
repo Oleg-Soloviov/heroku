@@ -27,6 +27,7 @@ SECRET_KEY = 'w-i9r*+qj$!hfom7$f#qcqmnfq5v+e*&@nx5(v(2k4mi)-3f3b'
 
 
 ADMINS = [('Oleg', 'osoloviov@mail.ru'), ('Oleg', 'osoloviov2000@gmail.com')]
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # SECURITY WARNING: don't run with debug turned on in production!
 # set DEBUG virable on heroku to 'PRODUCTION'
 MY_ENV = os.environ.get('DEBUG', 'False')
