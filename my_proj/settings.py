@@ -36,11 +36,6 @@ else:
     DEBUG = True
     ALLOWED_HOSTS = ["127.0.0.1","secret-mesa-26263.herokuapp.com"]
 
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-# Application definition
 
 INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
