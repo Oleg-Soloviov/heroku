@@ -10,7 +10,7 @@ from crispy_forms.layout import Layout, Field, Submit, Reset, HTML, Div
 
 
 class TinyMCEForm(forms.Form):
-    content = forms.CharField(widget=TinyMCE(attrs={'rows': 20}))
+    content = forms.CharField(widget=TinyMCE())
     
     def __init__(self, *args, **kwargs):
         super(TinyMCEForm, self).__init__(*args, **kwargs)

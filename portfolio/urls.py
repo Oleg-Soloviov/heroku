@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.views.generic import TemplateView
 from django.views.generic.base import RedirectView
 from .views import ContactView, django_fields
@@ -14,5 +14,6 @@ urlpatterns = [
     url(r'^forms/django-fields/([-\w]+)/$', django_fields, name="django_forms"),
     url(r'^forms/rich-text-editors/([-\w]+)/$', tinymceview, name="tinymce"),
     url(r'^home/$', TemplateView.as_view(template_name="portfolio/home_page.html"), name="home"),
+    url(r'^tinymce/', include('tinymce.urls')),
     url(r'^$', RedirectView.as_view(pattern_name="portfolio:home", permanent=True)),
 ]
