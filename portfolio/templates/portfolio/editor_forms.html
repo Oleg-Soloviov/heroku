@@ -17,7 +17,10 @@
 
 {% block my_css_and_js %}
 {% if 'ckeditor' in request.resolver_match.args %}
+<!--
     <script src="{% static '/js/ckeditor/ckeditor.js' %}"></script>
+-->
+<script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
 {% elif 'wysiwyg' in request.resolver_match.args %}
     <script src="{% static 'js/nicedit/nicEdit-latest.js' %}"></script>
     <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
