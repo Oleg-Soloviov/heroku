@@ -153,9 +153,12 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 ###################### TinyMCE ########################
-TINYMCE_JS_URL = os.path.join(STATIC_URL+'tiny_mce/tiny_mce_src.js')
+TINYMCE_JS_URL = os.path.join(STATIC_URL, 'tiny_mce/tiny_mce_src.js')
+TINYMCE_JS_ROOT = os.path.join(STATIC_ROOT, "tiny_mce/")
 TINYMCE_DEFAULT_CONFIG = {
-    'plugins': "table,spellchecker,paste,searchreplace,advhr,emotions,inlinepopups,style,preview,insertdate,inserttime,zoom,formats",
+    'cols': 40,
+    'rows':40,
+    'plugins': "table,paste,searchreplace,advhr,emotions,inlinepopups,style,preview,insertdate,inserttime,zoom,formats",
     'theme': "advanced",
     'cleanup_on_startup': True,
     'custom_undo_redo_levels': 10,
@@ -172,6 +175,5 @@ TINYMCE_DEFAULT_CONFIG = {
 
 }
 
-TINYMCE_SPELLCHECKER = True
 TINYMCE_COMPRESSOR = True
 

@@ -17,9 +17,6 @@
     <!-- Bootstrap core CSS -->
     <link href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
     
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="{% static 'bootstrap/dist/css/ie10-viewport-bug-workaround.css' %}" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="{% static 'my_css/my_site.css' %}" rel="stylesheet">
     {% block my_css_and_js %}{% endblock %}
@@ -30,7 +27,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <!--[if lt IE 10]>
+    <!--[if lte IE 10]>
       <link href="{% static 'bootstrap/dist/css/ie10-viewport-bug-workaround.css' %}" rel="stylesheet">
       <link href="{% static 'my_css/my_site.css' %}" rel="stylesheet">
     <![endif]-->
@@ -92,8 +89,11 @@
     <!-- Placed at the end of the document so the pages load faster -->
         <script src="{% static 'bootstrap/dist/js/jquery.min.js' %}"></script>
         <script src="{% static 'bootstrap/dist/js/bootstrap.min.js' %}"></script>
+
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <!--[if lte IE 10]>
         <script src="{% static 'bootstrap/dist/js/ie10-viewport-bug-workaround.js' %}"></script>
+        <![endif]-->
         <script src="{% static 'js/my_js.js' %}"></script>
     {% block my_js %}
     {% endblock %}

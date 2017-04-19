@@ -19,12 +19,14 @@
 {% if 'django-tinymce' in request.resolver_match.args %}
     {{ form.media }}
 {% elif 'ckeditor' in request.resolver_match.args %}
-    <script src="/static/js/ckeditor/ckeditor.js"></script>
+<!--
+    <script src="{% static 'js/ckeditor/ckeditor.js' %}"></script>
+-->
 {% elif 'wysiwyg' in request.resolver_match.args %}
-    <script src="/static/js/nicedit/nicEdit-latest.js" type="text/javascript"></script>
+    <script src="{% static 'js/nicedit/nicEdit-latest.js' %}"></script>
     <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
 {% elif 'tinymce4' in request.resolver_match.args %}
-    <script src="/static/js/tinymce/tinymce.min.js"></script>
+    <script src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
     <script>
     tinymce.init({
       selector: 'textarea',

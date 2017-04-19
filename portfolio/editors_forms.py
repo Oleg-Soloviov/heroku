@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 from tinymce.widgets import TinyMCE
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Layout, Fieldset, Submit, Reset, HTML, Div
+from crispy_forms.layout import Layout, Field, Submit, Reset, HTML, Div
 
 
 class TinyMCEForm(forms.Form):
