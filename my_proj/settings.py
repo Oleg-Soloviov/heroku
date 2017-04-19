@@ -51,7 +51,6 @@ INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
     'crispy_forms',
     'tinymce',
-#    'django_wysiwyg',
 ]
 
 MIDDLEWARE = [
@@ -154,7 +153,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 ###################### TinyMCE ########################
 TINYMCE_JS_URL = os.path.join(STATIC_URL, 'tiny_mce/tiny_mce_src.js')
-TINYMCE_JS_ROOT = os.path.join(STATIC_ROOT, "tiny_mce/")
+#TINYMCE_JS_ROOT = os.path.join(STATIC_ROOT, "tiny_mce/")
 TINYMCE_DEFAULT_CONFIG = {
     'cols': 40,
     'rows':40,
