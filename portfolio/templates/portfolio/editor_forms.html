@@ -16,10 +16,8 @@
 {% endblock %}
 
 {% block my_css_and_js %}
-{% if 'django-tinymce' in request.resolver_match.args %}
-    {{ form.media }}
-{% elif 'ckeditor' in request.resolver_match.args %}
-    <script src="{% static 'js/ckeditor/ckeditor.js' %}"></script>
+{% if 'ckeditor' in request.resolver_match.args %}
+    <script src="{% static '/js/ckeditor/ckeditor.js' %}"></script>
 {% elif 'wysiwyg' in request.resolver_match.args %}
     <script src="{% static 'js/nicedit/nicEdit-latest.js' %}"></script>
     <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
