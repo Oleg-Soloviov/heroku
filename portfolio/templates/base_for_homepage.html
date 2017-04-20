@@ -1,5 +1,10 @@
 {% load staticfiles %}
 {% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_language_info for LANGUAGE_CODE as current_lang %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +20,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'my_css/my_site_for_css3.css' %}" rel="stylesheet">
+    <link href="{% static 'my_css/my_site.css' %}" rel="stylesheet">
     <!-- Custom styles for this template -->
     {% block my_css_and_js %}{% endblock %}
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -42,7 +47,7 @@
             <span class="icon-bar"></span>
           </button>
         </div>
-        <div id="navbar" class="navbar-collapse collapse my-navbar-collapse navbar-right">
+        <div id="navbar" class="navbar-collapse collapse navbar-right">
           <ul class="nav navbar-nav">
               {% include 'portfolio/nav.html' %}
           </ul>
@@ -59,11 +64,27 @@
                         </option>
                     {% endfor %}
                   </select>
-                  <button type="submit" class="btn btn-default">{% trans "Change" %}</button>
+                  <button type="submit" class="btn btn">{% trans "Change" %}</button>
                 </div>
                 
             </form>
             </ul><!-- .navbar-right -->
+            
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="{% block main_language_url %}{% endblock %}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ current_lang.name_local }} ({{ current_lang.code }}) <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                        {% for language in languages %}
+                                {% if language.code != LANGUAGE_CODE %}
+                                {% language language.code %}
+                                    <li><a href="">{{ language.name_local }} ({{ language.code }}) </a></li>
+                                {% endlanguage %}
+                                {% endif %}
+                        {% endfor %}
+                        </ul>
+                    </li>
+                </ul><!-- .navbar-right -->
+            
         </div><!--/.navbar-collapse -->
       </div>
     </nav>

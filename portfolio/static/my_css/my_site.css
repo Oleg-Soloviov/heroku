@@ -1,12 +1,34 @@
 
 /* Move down content because we have a fixed navbar that is 50px tall */
+
+
 body {
   padding-top: 50px;
-  min-height: 800px;
+  padding-bottom: 20px;
+  background-image: url(/static/images/backgrounds/bkgr_1920_1080.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-.my_brand {
-    background-color: deepskyblue;
+/* navigation */
+#my_navbar {
+    background-color: rgb(3, 4, 66);
+    background-color: rgba(114, 90, 72, 0.8);
+}
+
+#my_navbar * {
+    color: white;
+    background-color: unset;
+}
+
+#my_navbar ul.nav li.active a {
+    color: silver;
+    text-decoration: underline;
+}
+
+#my_navbar .dropdown-menu {
+    background-color: rgba(114, 90, 72, 0.8);
 }
 
 /*       thanks page      */
@@ -15,14 +37,5 @@ div#thanks {
     margin-bottom: 90%;
 }
 
-body > nav {
-    margin-top: 0px;
-}
+/*  home page */
 
-div.jumbotron {
-    margin-top: 0px;
-}
-
-footer, hr, div#homepage_items > div.row > div {
-    opacity: 1;
-}

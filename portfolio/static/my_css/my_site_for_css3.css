@@ -43,7 +43,7 @@ div.jumbotron {
     to {margin-top: 0px;}
 }
 
-footer, hr, div#homepage_items > div.row > div {
+footer, hr, div#homepage_items div {
     opacity: 0.0;
     animation-name: reveal_items;
     animation-duration: 1.5s;
