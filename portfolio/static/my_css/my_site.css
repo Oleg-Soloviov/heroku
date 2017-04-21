@@ -39,3 +39,39 @@ div#thanks {
 
 /*  home page */
 
+.my_rezume {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    background-color: rgba(134, 110, 92, 0.9);
+    color: #33190B;
+    border-radius: 5px;
+    padding: 0px 10px 1px 5px;
+}
+
+.my_rezume img {
+    width: 40%;
+    float: left;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.my_rezume a {
+    color: #710b0b;
+}
+
+.my_jumbotron {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(134, 110, 92, 0.9);
+    color: #33190B;
+    border-radius: 5px;
+    padding: 0px 10px 1px 5px;
+}
+
+#my_header_items  div.col-md-6 div {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    //text-align: center;
+    background-color: rgba(134, 110, 92, 0.9);
+    color: #33190B;
+    border-radius: 5px;
+    padding: 0px 10px 1px 10px;
+}
