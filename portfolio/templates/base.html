@@ -1,5 +1,9 @@
 {% load staticfiles %}
 {% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_language_info for LANGUAGE_CODE as current_lang %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,11 +20,9 @@
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
-    
-    <!-- Custom styles for this template -->
     <link href="{% static 'my_css/my_site.css' %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
     {% block my_css_and_js %}{% endblock %}
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -34,7 +36,6 @@
   </head>
 
   <body>
-
     <nav class="navbar navbar-default navbar-fixed-top" id="my_navbar">
       <div class="container">
         <div class="navbar-header">
@@ -44,44 +45,42 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-            <a class="navbar-brand my_brand" href="{% url 'portfolio:home' %}">{% trans "My portfolio site" %}</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse my-navbar-collapse">
+        <div id="navbar" class="navbar-collapse collapse navbar-right">
           <ul class="nav navbar-nav">
               {% include 'portfolio/nav.html' %}
           </ul>
+          
            <ul class="nav navbar-nav navbar-right">
-            <form id="change_lang" class="navbar-form navbar-right" action="{% url 'set_language' %}" method="post">{% csrf_token %}
-                <div class="form-group">
-                  <select name="language" class="form-control">
-                    {% get_current_language as LANGUAGE_CODE %}
-                    {% get_available_languages as LANGUAGES %}
-                    {% get_language_info_list for LANGUAGES as languages %}
-                    {% for language in languages %}
-                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
-                            {{ language.name_local }} ({{ language.code }})
-                        </option>
-                    {% endfor %}
-                  </select>
-                  <button type="submit" class="btn btn-default">{% trans "Change" %}</button>
-                </div>
-                
-            </form>
-            </ul><!-- .navbar-right -->
+               
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ current_lang.name_local }} ({{ current_lang.code }}) <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><form id="change_lang" class="navbar-form" action="{% url 'set_language' %}" method="post" style="margin:-5px">{% csrf_token %}
+                                    {% for language in languages %}
+                                    {% if language.code != LANGUAGE_CODE %}
+                                    {% language language.code %}
+                                        <input name="language" type="hidden" value="{{ language.code }}">
+                                        <button type="submit" class="btn" style="box-shadow:none;border:none;outline:none;">{{ language.name_local }} ({{ language.code }})</button>
+                                    {% endlanguage %}
+                                    {% endif %}
+                            {% endfor %}
+                        </form>
+                    </li>
+                  </ul>
+              </li>
+            <li>
+           </ul><!-- .navbar-right -->
         </div><!--/.navbar-collapse -->
-      </div>
+      </div><!-- /container -->
     </nav>
-
-{% block main_container %}
-{% endblock main_container %}
-
-
+    <div class="container">
+    {% block main_container %}{% endblock main_container %}
       <hr>
-
       <footer>
         <p>&copy;  {% now "Y" %} <a href="{% url 'portfolio:home' %}">{% trans "My portfolio site" %}</a></p>
       </footer>
-    </div> <!-- /container -->
+    </div><!-- /container -->
 
 
     <!-- Bootstrap core JavaScript

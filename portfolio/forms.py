@@ -39,7 +39,7 @@ class TextInputFieldsForm(forms.Form):
         self.helper.form_action = reverse('portfolio:django_forms', args=('text-input',))
         
         self.helper.layout = Layout(
-            HTML(_("<h4 class='text-primary'>TextInput based fields.</h4><p>These Django fields use <strong>TextInput</strong> as a default widget, so only <em>required</em>, <em>max_length</em> and <em>min_length</em> properties are validated by browsers. Try to input the wrong value and submit the form - browser validation will not warn you  about an error and you will get a Django validation error.</p><div class='panel panel-info'><div class='panel-body'>All <a href='{% url 'portfolio:django_forms' 'date-time-fields' %}'>time and date</a> Django fields use text inputs.</div></div>")),
+            HTML(_("<h4><em>TextInput based fields.</em></h4><p>These Django fields use <strong>TextInput</strong> as a default widget, so only <em>required</em>, <em>max_length</em> and <em>min_length</em> properties are validated by browsers. Try to input the wrong value and submit the form - browser validation will not warn you  about an error and you will get a Django validation error.</p><div class='panel panel-info'><div class='panel-body'>All <a href='{% url 'portfolio:django_forms' 'date-time-fields' %}'>time and date</a> Django fields use text inputs.</div></div>")),
             PrependedText('your_name', 'CharField', placeholder=_("any char or sign")),
             PrependedText('my_slug', 'SlugField', placeholder=_("only letters, numbers, underscores, and hyphens")),
             PrependedText('ip', 'GenericIPAddressField', placeholder="127.0.0.1"),
@@ -71,7 +71,7 @@ class TextBasedInputFieldsForm(forms.Form):
         self.helper.form_show_labels = False
         
         self.helper.layout = Layout(
-            HTML(_("<h4 class='text-primary'>HTML5 input types.</h4><p>&quot;If your form includes an URLField, an EmailField or any integer field type, Django will use the url, email and number HTML5 input types. By default, browsers may apply their own validation on these fields, which may be stricter than Django’s validation. If you would like to disable this behavior, set the <strong>novalidate</strong> attribute on the form tag, or specify a different widget on the field, like TextInput&quot; (<a href='https://docs.djangoproject.com/en/1.10/topics/forms/#working-with-forms' target='_blank'>Django Documentation <span class='glyphicon glyphicon-new-window' aria-hidden='true'></span></a>)</p><p>Browsers apply their own validation on these fields. For any integer field <strong>Field.localize</strong> must be <strong>False</strong>. Try to input the wrong value and submit the form - browser validation will warn you about an error in the first wrong field.</p>")),
+            HTML(_("<h4><em>HTML5 input types.</em></h4><p>&quot;If your form includes an URLField, an EmailField or any integer field type, Django will use the url, email and number HTML5 input types. By default, browsers may apply their own validation on these fields, which may be stricter than Django’s validation. If you would like to disable this behavior, set the <strong>novalidate</strong> attribute on the form tag, or specify a different widget on the field, like TextInput&quot; (<a href='https://docs.djangoproject.com/en/1.10/topics/forms/#working-with-forms' target='_blank'>Django Documentation <span class='glyphicon glyphicon-new-window' aria-hidden='true'></span></a>)</p><p>Browsers apply their own validation on these fields. For any integer field <strong>Field.localize</strong> must be <strong>False</strong>. Try to input the wrong value and submit the form - browser validation will warn you about an error in the first wrong field.</p>")),
             PrependedText('my_url', 'URLField', placeholder=_("valid URL")),
             PrependedText('my_email', 'EmailField', placeholder=_("valid Email")),
             PrependedText('integer', 'IntegerField', placeholder=_("integer between 10 and 100 - required")),
@@ -103,7 +103,7 @@ class ChoiceDjangoFieldsForm(forms.Form):
         self.helper.form_show_labels = True
         
         self.helper.layout = Layout(
-            HTML(_("<h4 class='text-primary'>Boolean and Choice fields.</h4><p>These Django fields let you make a choice. If you want to include a boolean in your form that can be either <strong>True</strong> or <strong>False</strong> (e.g. a checked or unchecked checkbox), you must remember to pass in <strong>required=False</strong> when creating the <strong>BooleanField</strong>.</p>")),
+            HTML(_("<h4><em>Boolean and Choice fields.</em></h4><p>These Django fields let you make a choice. If you want to include a boolean in your form that can be either <strong>True</strong> or <strong>False</strong> (e.g. a checked or unchecked checkbox), you must remember to pass in <strong>required=False</strong> when creating the <strong>BooleanField</strong>.</p>")),
             'happiness',
             HTML("<hr />"),
             'color',
@@ -141,7 +141,7 @@ class DateTimeDjangoFieldsForm(forms.Form):
         self.helper.form_show_labels = False
         
         self.helper.layout = Layout(
-            HTML(_("<h4 class='text-primary'>Time and Date Django fields.</h4><p>Django uses <strong>TextInput</strong> as a default widget for date and time fields, so only <em>required</em>, <em>max_length</em> and <em>min_length</em> properties are validated by browsers. Try to input the wrong value and submit the form&nbsp;-&nbsp;browser validation will not warn you  about an error and you will get a Django validation error.</p><p>Each field accepts <strong>format</strong> optional argument. If no format argument is provided the first format found in DATE(TIME)_INPUT_FORMATS settings will be used.</p>")),
+            HTML(_("<h4><em>Time and Date Django fields.</em></h4><p>Django uses <strong>TextInput</strong> as a default widget for date and time fields, so only <em>required</em>, <em>max_length</em> and <em>min_length</em> properties are validated by browsers. Try to input the wrong value and submit the form&nbsp;-&nbsp;browser validation will not warn you  about an error and you will get a Django validation error.</p><p>Each field accepts <strong>format</strong> optional argument. If no format argument is provided the first format found in DATE(TIME)_INPUT_FORMATS settings will be used.</p>")),
             PrependedText('my_time', 'TimeField', placeholder=_("14:30:59 or 14:30")),
             PrependedText('my_datetime', 'DateTimeField', placeholder=_("2006-10-25 14:30:59 (YYYY-MM-DD HH:MM:SS)")),
             PrependedText('my_date', 'DateField', placeholder=_("2017-03-19 (YYYY-MM-DD)")),

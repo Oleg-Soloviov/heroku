@@ -155,6 +155,7 @@ CRISPY_TEMPLATE_PACK = 'bootstrap3'
 TINYMCE_DEFAULT_CONFIG = {
     'height': '400px',
     'width': '100%',
+    'background-color': 'maroon',
     'plugins': "table,paste,searchreplace,advhr,emotions,inlinepopups,style,preview,insertdatetime,",
     'theme': "advanced",
     'cleanup_on_startup': True,
@@ -167,7 +168,7 @@ TINYMCE_DEFAULT_CONFIG = {
         {'title' : 'Bold text', 'inline' : 'b'},
         {'title' : 'Red text', 'inline' : 'span', 'styles' : {'color' : '#ff0000'}},
         {'title' : 'Red header', 'block' : 'h1', 'styles' : {'color' : '#ff0000'}},
-        {'title' : 'Table row 1', 'selector' : 'tr', 'classes' : 'tablerow1'}
+        {'title' : 'Table row 1', 'selector' : 'tr', 'classes' : 'tablerow1'},
     ]
 
 }
