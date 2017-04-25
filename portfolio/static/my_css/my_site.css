@@ -49,10 +49,12 @@ a:hover {
 }
 
 #my_navbar .dropdown-menu a {
+    background-color: rgb(114, 90, 72);
     background-color: rgba(114, 90, 72, 0.8);
 }
 
 #my_navbar .dropdown-menu a:hover {
+    background-color: rgb(124, 100, 82);
     background-color: rgba(124, 100, 82, 0.8);
 }
 
@@ -67,6 +69,7 @@ a:hover {
 /* main section */
 
 #main {
+    background-color: rgb(134, 110, 92);
     background-color: rgba(134, 110, 92, 0.9);
     border-radius: 5px;
 }
@@ -125,6 +128,7 @@ div#thanks {
 .my_rezume {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
+    background-color: rgb(134, 110, 92);
     background-color: rgba(134, 110, 92, 0.9);
     border-radius: 5px;
     padding: 0px 10px 1px 5px;
@@ -155,12 +159,14 @@ div#thanks {
 
 .my_jumbotron {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(134, 110, 92);
     background-color: rgba(134, 110, 92, 0.9);
     border-radius: 5px;
     padding: 0px 10px 1px 5px;
 }
 
 #my_header_items  div.col-md-6 div {
+    background-color: rgb(134, 110, 92);
     background-color: rgba(134, 110, 92, 0.9);
     border-radius: 5px;
     padding: 0px 10px 1px 10px;
