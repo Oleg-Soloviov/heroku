@@ -12,7 +12,8 @@
                     <div class="col-xs-12 col-sm-12">
                         <div class="my_rezume">
                             <h3>{% trans 'Oleg Soloviov' %}</h3>
-                            <p class="clearfix text-left"><img src="{% static 'images/my_foto_400_400.jpg' %}" alt="My photoID">{% trans "I'm a web developer. I&nbsp;have more or less skills in Python, Django, HTML, CSS, JavaScript, Bootstrap and other web technologies. I worked for a small team and participated in the creation of several sites. Feel free to " %}<a href="{% url 'portfolio:contact' %}">{% trans 'contact me' %}.</a></p>
+                            <p class="clearfix text-left"><img src="{% static 'images/my_foto_400_400.jpg' %}" alt="My photoID">{% trans "I'm a web developer. I&nbsp;have more or less skills in Python, Django, HTML, CSS, JavaScript, Bootstrap and other web technologies. I worked for a small team and participated in the creation of several sites." %}</a></p>
+                            <p class="text-left"><a class="btn btn-default" href="{% url 'portfolio:contact' %}" role="button">{% trans "Contact" %} &raquo;</a></p>
                         </div>
                     </div>
                 </div>

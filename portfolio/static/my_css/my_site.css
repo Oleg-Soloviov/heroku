@@ -39,6 +39,10 @@ a:hover {
     text-decoration: underline;
 }
 
+#my_navbar ul.nav a:hover, #my_navbar ul.nav a:hover span, #my_navbar ul.nav button:hover {
+    color: #43491B;
+}
+
 #my_navbar ul.nav li.active > a, #my_navbar ul.nav li.active > a span {
     color: #33190B;
     text-decoration: underline;
@@ -133,7 +137,21 @@ div#thanks {
     border-radius: 5px;
 }
 
+.my_rezume a.btn-default {
+    background: unset;
+    color: #33190B;
+    border-color: #33190B;
+    -webkit-transition: background 0.5s; /* Safari */
+    transition: background 0.5s;
+    -webkit-transition: color 0.5s; /* Safari */
+    transition: color 0.5s;
+}
 
+.my_rezume a.btn-default:hover {
+    background: #33190B;
+    color: white;
+    border-color: white;
+}
 
 .my_jumbotron {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-24 07:34+0000\n"
+"POT-Creation-Date: 2017-04-25 10:19+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,9 +95,9 @@ msgid ""
 "body'>All <a href='{% url 'portfolio:django_forms' 'date-time-fields' "
 "%}'>time and date</a> Django fields use text inputs.</div></div>"
 msgstr ""
-"<h4><em>Поля на основе TextInput.</em></h4><p>Для этих полей "
-"Django использует <strong>TextInput</strong> в качестве виджета по "
-"умолчанию, поэтому браузеры проверяют поля только на соответствие свойствам "
+"<h4><em>Поля на основе TextInput.</em></h4><p>Для этих полей Django "
+"использует <strong>TextInput</strong> в качестве виджета по умолчанию, "
+"поэтому браузеры проверяют поля только на соответствие свойствам "
 "<em>required</em>, <em>max_length</em> и <em>min_length</em>. Попробуйте "
 "ввести неверное значение и отправить форму&nbsp;-&nbsp;браузер не "
 "предупредит вас об ошибке и вы  получите ошибку валидации Django.</p><div "
@@ -142,16 +142,16 @@ msgid ""
 "input the wrong value and submit the form - browser validation will warn you "
 "about an error in the first wrong field.</p>"
 msgstr ""
-"<h4><em>HTML5 поля.</em></h4><p>&quot;Если в вашей форме есть "
-"поля URLField, EmailField, либо одно из цифровых полей, то Django будет "
-"использовать HTML5 поля: url, email и number соответственно. По умолчанию, "
-"браузеры могут осуществлять свою проверку этих полей, которая может быть "
-"даже строже, чем проверка (валидация) Django. Если вы хотите отключить эту "
-"проверку, то установите атрибут <strong>novalidate</strong> самой формы, или "
-"используйте другой виджет для этого поля, например TextInput&quot; (<a "
-"href='https://docs.djangoproject.com/en/1.10/topics/forms/#working-with-"
-"forms' target='_blank'>Django Documentation <span class='glyphicon glyphicon-"
-"new-window' aria-hidden='true'></span></a>)</p><p>Браузеры осуществляют свою "
+"<h4><em>HTML5 поля.</em></h4><p>&quot;Если в вашей форме есть поля URLField, "
+"EmailField, либо одно из цифровых полей, то Django будет использовать HTML5 "
+"поля: url, email и number соответственно. По умолчанию, браузеры могут "
+"осуществлять свою проверку этих полей, которая может быть даже строже, чем "
+"проверка (валидация) Django. Если вы хотите отключить эту проверку, то "
+"установите атрибут <strong>novalidate</strong> самой формы, или используйте "
+"другой виджет для этого поля, например TextInput&quot; (<a href='https://"
+"docs.djangoproject.com/en/1.10/topics/forms/#working-with-forms' "
+"target='_blank'>Django Documentation <span class='glyphicon glyphicon-new-"
+"window' aria-hidden='true'></span></a>)</p><p>Браузеры осуществляют свою "
 "проверку этих полей. Для любого числового поля <strong>Field.localize</"
 "strong> должно быть установлено в значение <strong>False</strong>. "
 "Попробуйте ввести неправильное значение и отправить форму&nbsp;-&nbsp;"
@@ -186,8 +186,8 @@ msgid ""
 "unchecked checkbox), you must remember to pass in <strong>required=False</"
 "strong> when creating the <strong>BooleanField</strong>.</p>"
 msgstr ""
-"<h4><em>Поля выбора.</em></h4><p>Эти поля Django позволяют вам "
-"сделать выбор. Если вы намерены включить в cвою форму поле <strong>checkbox</"
+"<h4><em>Поля выбора.</em></h4><p>Эти поля Django позволяют вам сделать "
+"выбор. Если вы намерены включить в cвою форму поле <strong>checkbox</"
 "strong>, которое может быть либо <strong>True</strong>, либо <strong>False</"
 "strong> (т.е. флажок отмечен или нет), то необходимо, определяя поле "
 "<strong>BooleanField</strong> установить <strong>required=False</strong>.</p>"
@@ -209,9 +209,9 @@ msgid ""
 "<strong>format</strong> optional argument. If no format argument is provided "
 "the first format found in DATE(TIME)_INPUT_FORMATS settings will be used.</p>"
 msgstr ""
-"<h4><em>Django поля для даты и времени.</em></h4><p>Django "
-"использует <strong>TextInput</strong> как виджет по умолчанию для полей даты "
-"и времени, поэтому только свойства <em>required</em>, <em>max_length</em> и "
+"<h4><em>Django поля для даты и времени.</em></h4><p>Django использует "
+"<strong>TextInput</strong> как виджет по умолчанию для полей даты и времени, "
+"поэтому только свойства <em>required</em>, <em>max_length</em> и "
 "<em>min_length</em> проверяются браузерами. Попробуйте ввести неверное "
 "значение в поле и отправить форму&nbsp;-&nbsp;браузер не предупредит вас о "
 "неверном значении и вы увидите только сообшение Django об ошибке.</p><p>В "
@@ -246,21 +246,21 @@ msgstr "Мой портфолио сайт"
 
 #: templates/portfolio/contact.html:6
 msgid "Send me your letter."
-msgstr "Пошлите мне письмо"
+msgstr "Отправить письмо"
 
 #: templates/portfolio/contact.html:11
 msgid "To send a letter fill the form."
-msgstr "Чтобы послать письмо заполните форму."
+msgstr "Чтобы отправить письмо заполните форму."
 
 #: templates/portfolio/contact.html:18
 msgid "Send"
-msgstr "Послать"
+msgstr "Отправить"
 
 #: templates/portfolio/css3.html:9
 msgid "Django form fields."
 msgstr "Поля Django"
 
-#: templates/portfolio/css3.html:10 templates/portfolio/home_page.html:35
+#: templates/portfolio/css3.html:10 templates/portfolio/home_page.html:36
 msgid ""
 "The Django forms library comes with a set of Field classes that represent "
 "common validation needs."
@@ -268,8 +268,8 @@ msgstr ""
 "Django фреймворк содержит библиотеку полей HTML форм, реализующих основные "
 "случаи проверки (валидации) полей."
 
-#: templates/portfolio/css3.html:11 templates/portfolio/home_page.html:36
-#: templates/portfolio/home_page.html:43
+#: templates/portfolio/css3.html:11 templates/portfolio/home_page.html:37
+#: templates/portfolio/home_page.html:44
 msgid "View details"
 msgstr "Подробности"
 
@@ -305,32 +305,31 @@ msgstr "Соловьев Олег"
 msgid ""
 "I'm a web developer. I&nbsp;have more or less skills in Python, Django, "
 "HTML, CSS, JavaScript, Bootstrap and other web technologies. I worked for a "
-"small team and participated in the creation of several sites. Feel free to "
+"small team and participated in the creation of several sites."
 msgstr ""
-"Я веб разработчик. Обладаю в большей или меньшей степени   навыками в"
-" Python, Django, HTML, CSS, JavaScript, Bootstrap и в других веб"
-" технологиях. Я работал на маленький коллектив и участвовал  в создании"
-" нескольких сайтов. Если необходимо "
+"Я веб разработчик. Обладаю в большей или меньшей степени   навыками в "
+"Python, Django, HTML, CSS, JavaScript, Bootstrap и в других веб технологиях. "
+"Я работал на маленький коллектив и участвовал  в создании нескольких сайтов. "
 
-#: templates/portfolio/home_page.html:15
-msgid "contact me"
-msgstr "напишите мне"
+#: templates/portfolio/home_page.html:16 templates/portfolio/nav.html:17
+msgid "Contact"
+msgstr "Контакты"
 
-#: templates/portfolio/home_page.html:34
+#: templates/portfolio/home_page.html:35
 msgid "Django form fields"
 msgstr "Поля Django"
 
-#: templates/portfolio/home_page.html:41
+#: templates/portfolio/home_page.html:42
 msgid "Rich text editors"
 msgstr "Редакторы текста"
 
-#: templates/portfolio/home_page.html:42
+#: templates/portfolio/home_page.html:43
 msgid ""
 "Browser-based WYSIWYG content editors bring to the web features found in "
 "desktop editing applications."
 msgstr ""
-"Браузерные WYSIWYG редакторы контента воплощают "
-"черты десктопных приложений для редактирования текста.</p>"
+"Браузерные WYSIWYG редакторы контента воплощают черты десктопных приложений "
+"для редактирования текста.</p>"
 
 #: templates/portfolio/nav.html:2
 msgid "Home"
@@ -342,11 +341,7 @@ msgstr "Формы"
 
 #: templates/portfolio/nav.html:7
 msgid "DateTime fields"
-msgstr "Поля выбора"
-
-#: templates/portfolio/nav.html:17
-msgid "Contact"
-msgstr "Контакты"
+msgstr "Время и Дата"
 
 #: templates/portfolio/thanks.html:5
 msgid "Thank you for your email."
