@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-25 10:19+0000\n"
+"POT-Creation-Date: 2017-04-26 09:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -256,11 +256,55 @@ msgstr "Чтобы отправить письмо заполните форму
 msgid "Send"
 msgstr "Отправить"
 
-#: templates/portfolio/css3.html:9
-msgid "Django form fields."
+#: templates/portfolio/css.html:17 templates/portfolio/home_page.html:14
+msgid "Oleg Soloviov"
+msgstr "Соловьев Олег"
+
+#: templates/portfolio/css.html:18 templates/portfolio/home_page.html:15
+msgid ""
+"I'm a web developer. I&nbsp;have more or less skills in Python, Django, "
+"HTML, CSS, JavaScript, Bootstrap and other web technologies. I worked for a "
+"small team and participated in the creation of several sites."
+msgstr ""
+"Я веб разработчик. Обладаю в большей или меньшей степени   навыками в "
+"Python, Django, HTML, CSS, JavaScript, Bootstrap и в других веб технологиях. "
+"Я работал на маленький коллектив и участвовал  в создании нескольких сайтов. "
+
+#: templates/portfolio/css.html:19 templates/portfolio/home_page.html:16
+#: templates/portfolio/nav.html:23
+msgid "Contact"
+msgstr "Контакты"
+
+#: templates/portfolio/css.html:32
+msgid ""
+"I disabled animation for devices with screen less than 768 pixels. Sorry. "
+"Try to view this page with larger monitor."
+msgstr ""
+"Извините, но я отключил анимацию для устройств с экраном меньше чем 768 "
+"пикселей. Попробуйте открыть эту страницу на устройстве с большим монитором."
+
+#: templates/portfolio/css.html:39 templates/portfolio/home_page.html:35
+msgid "CSS effects"
+msgstr "CSS эффекты"
+
+#: templates/portfolio/css.html:40 templates/portfolio/home_page.html:36
+msgid ""
+"CSS describes the style, layout of an HTML document and transformation of "
+"it's elements."
+msgstr ""
+"CSS описывает стиль, взаимное расположение и трансформацию элементов документа HTML."
+
+#: templates/portfolio/css.html:41 templates/portfolio/css.html:48
+#: templates/portfolio/css.html:55 templates/portfolio/home_page.html:37
+#: templates/portfolio/home_page.html:44 templates/portfolio/home_page.html:51
+msgid "View details"
+msgstr "Подробности"
+
+#: templates/portfolio/css.html:46 templates/portfolio/home_page.html:42
+msgid "Django form fields"
 msgstr "Поля Django"
 
-#: templates/portfolio/css3.html:10 templates/portfolio/home_page.html:36
+#: templates/portfolio/css.html:47 templates/portfolio/home_page.html:43
 msgid ""
 "The Django forms library comes with a set of Field classes that represent "
 "common validation needs."
@@ -268,10 +312,17 @@ msgstr ""
 "Django фреймворк содержит библиотеку полей HTML форм, реализующих основные "
 "случаи проверки (валидации) полей."
 
-#: templates/portfolio/css3.html:11 templates/portfolio/home_page.html:37
-#: templates/portfolio/home_page.html:44
-msgid "View details"
-msgstr "Подробности"
+#: templates/portfolio/css.html:53 templates/portfolio/home_page.html:49
+msgid "Rich text editors"
+msgstr "Редакторы текста"
+
+#: templates/portfolio/css.html:54 templates/portfolio/home_page.html:50
+msgid ""
+"Browser-based WYSIWYG content editors bring to the web features found in "
+"desktop editing applications."
+msgstr ""
+"Браузерные WYSIWYG редакторы контента воплощают черты десктопных приложений "
+"для редактирования текста.</p>"
 
 #: templates/portfolio/django_forms.html:6
 msgid "All Django form fields."
@@ -297,40 +348,6 @@ msgstr "HTML5 поля"
 msgid "Choice fields"
 msgstr "Поля выбора"
 
-#: templates/portfolio/home_page.html:14
-msgid "Oleg Soloviov"
-msgstr "Соловьев Олег"
-
-#: templates/portfolio/home_page.html:15
-msgid ""
-"I'm a web developer. I&nbsp;have more or less skills in Python, Django, "
-"HTML, CSS, JavaScript, Bootstrap and other web technologies. I worked for a "
-"small team and participated in the creation of several sites."
-msgstr ""
-"Я веб разработчик. Обладаю в большей или меньшей степени   навыками в "
-"Python, Django, HTML, CSS, JavaScript, Bootstrap и в других веб технологиях. "
-"Я работал на маленький коллектив и участвовал  в создании нескольких сайтов. "
-
-#: templates/portfolio/home_page.html:16 templates/portfolio/nav.html:17
-msgid "Contact"
-msgstr "Контакты"
-
-#: templates/portfolio/home_page.html:35
-msgid "Django form fields"
-msgstr "Поля Django"
-
-#: templates/portfolio/home_page.html:42
-msgid "Rich text editors"
-msgstr "Редакторы текста"
-
-#: templates/portfolio/home_page.html:43
-msgid ""
-"Browser-based WYSIWYG content editors bring to the web features found in "
-"desktop editing applications."
-msgstr ""
-"Браузерные WYSIWYG редакторы контента воплощают черты десктопных приложений "
-"для редактирования текста.</p>"
-
 #: templates/portfolio/nav.html:2
 msgid "Home"
 msgstr "Главная"
@@ -350,3 +367,4 @@ msgstr "Спасибо за Ваше сообщение."
 #: templates/portfolio/thanks.html:13
 msgid "Thank you for your email. I will answer as soon as possible."
 msgstr "Спасибо за Ваше письмо. Я отвечу как можно быстрее."
+
