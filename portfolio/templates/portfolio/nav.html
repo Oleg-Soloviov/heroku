@@ -14,4 +14,10 @@
                     <li {% if 'ckeditor' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'ckeditor' %}">CKEditor</a></li>
                   </ul>
                 </li>
+                <li class="dropdown {% if 'css' in request.path %}active{% endif %}">
+                  <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CSS <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li {% if 'animation' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:css' 'animation' %}">CSS3 Animation</a></li>
+                  </ul>
+                </li>
                 <li {% if 'contact' in request.path %}class="active"{% endif %}><a href="{% url 'portfolio:contact' %}">{% trans "Contact" %}</a></li>

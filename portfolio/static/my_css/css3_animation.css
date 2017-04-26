@@ -1,0 +1,81 @@
+@media screen and (min-width: 767px) {
+
+    body > nav {
+        margin-top: -50px;
+        animation-name: nav_drop_down;
+        animation-duration: 0.75s;
+        animation-delay: 0.35s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes nav_drop_down {
+        from {margin-top: -50px;}
+        to {margin-top: 0px;}
+    }
+
+    div.my_jumbotron {
+        position:relative;
+        margin-top: -250px;
+        animation-name: jumbotron_drop_down;
+        animation-duration: 1.75s;
+        animation-delay: 1.25s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes jumbotron_drop_down {
+        from {margin-top: -250px;}
+        to {margin-top: 0px;}
+    }
+
+
+
+
+    footer, hr, div#my_header_items div {
+        opacity: 0.0;
+        animation-name: reveal_items;
+        animation-duration: 1s;
+        animation-delay: 3s;
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes reveal_items {
+        from {opacity: 0.0;}
+        to {opacity: 1;}
+    }
+
+    .my_jumbotron h2 {
+        display: none;
+    }
+
+div.my_rezume {
+    -ms-transform: rotate(-90deg); /* IE 9 */
+    -ms-transform-origin: -300px 50%%; /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    -webkit-transform-origin: -300px 50%%; /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+    transform-origin: -300px 50%;
+    animation-name: rotate_rezume;
+    animation-duration: 1.5s;
+    animation-delay: 4s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    }
+
+    @keyframes rotate_rezume {
+        from {transform: rotate(-90deg);}
+        to {transform: rotate(0deg);}
+    }
+}
+
+/*      on         */
+@media screen and (max-width: 767px) {
+    .my_jumbotron h1 {
+        display: none;
+    }
+}
+
+
+

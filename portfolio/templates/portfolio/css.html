@@ -3,6 +3,9 @@
 {% load i18n %}
 
 {% block my_css_and_js %}
+{% if 'animation' in request.path %}
+<link href="{% static 'my_css/css3_animation.css' %}" rel="stylesheet">
+{% endif %}
 {% endblock %}
 
 {% block main_container %}
@@ -26,6 +29,7 @@
                             <h1>Front/Back-end</h1>
                             <h1 class="text-center">Python Django</h1>
                             <h1 class="text-right">HTML CSS JS</h1>
+                            <h2>{% trans 'I disabled animation for devices with screen less than 768 pixels. Sorry. Try to view this page with larger monitor.' %}</h2>
                         </div>
                     </div>
                 </div>

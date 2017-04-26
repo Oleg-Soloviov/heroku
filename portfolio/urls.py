@@ -9,7 +9,7 @@ app_name = 'portfolio'
 urlpatterns = [
     url(r'^contact/$', ContactView.as_view(), name="contact"),
     url(r'^thanks/$', TemplateView.as_view(template_name="portfolio/thanks.html"), name="thanks"),
-    url(r'^css3/$', TemplateView.as_view(template_name="portfolio/css3.html"), name="css3"),
+    url(r'^css/([-\w]+)/$', TemplateView.as_view(template_name="portfolio/css.html"), name="css"),
     url(r'^my_style_home_page/$', TemplateView.as_view(template_name="portfolio/my_style_home_page.html"), name="my_style_homepage"),
     url(r'^forms/django-fields/([-\w]+)/$', django_fields, name="django_forms"),
     url(r'^forms/rich-text-editors/([-\w]+)/$', tinymceview, name="tinymce"),
