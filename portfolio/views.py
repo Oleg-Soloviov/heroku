@@ -1,5 +1,6 @@
 from django.urls import reverse_lazy
 from django.shortcuts import render
+from django.views.generic import TemplateView
 from django.views.generic.edit import FormView
 from portfolio.contact_form import ContactForm
 from .forms import ChoiceDjangoFieldsForm, TextInputFieldsForm, TextBasedInputFieldsForm, DateTimeDjangoFieldsForm
@@ -44,3 +45,11 @@ def django_fields(request, fields):
         elif fields == "date-time-fields":
             form = DateTimeDjangoFieldsForm()
     return render(request, 'portfolio/django_forms.html', {'form': form})
+
+
+class CssView(TemplateView):
+    def get_template_names(self):
+        if 'animation' in self.args:
+            return ["portfolio/css/animation.html",]
+        elif 'parallax' in self.args:
+            return ["portfolio/css/parallax.html",]

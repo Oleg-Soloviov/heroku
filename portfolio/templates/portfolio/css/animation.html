@@ -3,9 +3,7 @@
 {% load i18n %}
 
 {% block my_css_and_js %}
-{% if 'animation' in request.path %}
 <link href="{% static 'my_css/css3_animation.css' %}" rel="stylesheet">
-{% endif %}
 {% endblock %}
 
 {% block main_container %}
