@@ -113,6 +113,21 @@
         padding:50px 80px;
         text-align: center;
         font-size: 2em;
+        position:relative;
+    }
+    
+    #special_case {
+        background-image: url(/static/images/backgrounds/shark.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 400px;
+        width: 400px;
+        border-radius: 200px;
+        position: absolute;
+        right: -200px;
+        top: 0px;
     }
 </style>
     
@@ -182,6 +197,7 @@
       </div>
     </div>
     <div class="text2">
+        <div id="special_case"></div>
         <h3>Parallax TEXT 2</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>

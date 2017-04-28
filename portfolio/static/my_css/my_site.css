@@ -27,6 +27,7 @@ a:hover {
 #my_navbar {
     background-color: rgb(114, 90, 72);
     background-color: rgba(114, 90, 72, 0.8);
+    margin-top: 0px;
 }
 
 #my_navbar * {

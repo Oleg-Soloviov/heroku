@@ -70,7 +70,7 @@ div.my_rezume {
     }
 }
 
-/*      on         */
+/*     turn off animation on screens less 768px       */
 @media screen and (max-width: 767px) {
     .my_jumbotron h1 {
         display: none;
