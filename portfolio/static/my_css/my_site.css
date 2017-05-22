@@ -193,3 +193,18 @@ div#thanks {
     border-color: white;
 }
 
+/*
+.help_text ul, .help_text p {
+    list-style: inside;
+    padding-left: 0;
+    font-size: small;
+}
+*/
+
+.errorlist  {
+    list-style: none;
+    padding: 0;
+    color: maroon;
+    margin-bottom: 0;
+}
+

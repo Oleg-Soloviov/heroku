@@ -18,9 +18,7 @@ class ContactView(FormView):
         return super(ContactView, self).form_valid(form)
 
 def django_fields(request, fields):
-    # if this is a POST request we need to process the form data
     if request.method == 'POST':
-        # create a form instance and populate it with data from the request:
         if fields == "text-input":
             form = TextInputFieldsForm(request.POST)
             form.is_valid()
@@ -34,7 +32,6 @@ def django_fields(request, fields):
             form = DateTimeDjangoFieldsForm(request.POST)
             form.is_valid()
 
-    # if a GET (or any other method) we'll create a blank form
     else:
         if fields == "text-input":
             form = TextInputFieldsForm()

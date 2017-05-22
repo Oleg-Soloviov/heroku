@@ -9,4 +9,5 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     url(r'^', include('portfolio.urls')),
+    url('^', include('django.contrib.auth.urls')),
 )

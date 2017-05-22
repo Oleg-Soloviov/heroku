@@ -46,13 +46,31 @@
             <span class="icon-bar"></span>
           </button>
         </div>
-        <div id="navbar" class="navbar-collapse collapse navbar-right">
+        <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
               {% include 'portfolio/nav.html' %}
           </ul>
           
            <ul class="nav navbar-nav navbar-right">
-               
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                {% if user.is_authenticated %}
+                   <li>
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ user.username }}
+                    </li>
+                    <li>
+                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span> <a href="{% url 'logout' %}">Logout</a>
+                    </li>
+                {% else %}
+                    <li>
+                    <a href="{% url 'login' %}">Login</a>
+                   </li>
+                    <li>
+                    <a href="{% url 'portfolio:create_user' %}">Create account</a>
+                   </li>
+               {% endif %}
+               </ul>
               <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ current_lang.name_local }} ({{ current_lang.code }}) <span class="caret"></span></a>
                   <ul class="dropdown-menu">
