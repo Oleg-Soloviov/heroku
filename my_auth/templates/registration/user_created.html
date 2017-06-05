@@ -5,15 +5,14 @@
 {% block title %}{% trans "Thank you for your email." %}{% endblock %}
 
 {% block main_container %}
-    <div class="container">
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <div id="thanks" class="panel panel-default">
                   <div class="panel-body">
-                    <h3 style="text-align:center">{% if user.is_authenticated %}Hello {{ user.username }}!{% else %}Hello anonimous!{% endif %}</h3>
+                    <h3 style="text-align:center">Hello, {{ request.session.username }}!</h3>
+                    <h4 style="line-height:1.5">On your address: <span class="label label-default">{{ request.session.email }}</span> was sent a letter. To complete the registration, follow the link in the email.</h4>
                   </div>
                 </div>
             </div><!-- col-md-12 -->
         </div><!-- row -->
-    </div><!-- container-->
 {% endblock main_container %}

@@ -120,8 +120,8 @@ a:hover {
 
 /*       thanks page      */
 div#thanks {
-    margin-top: 10%;
-    margin-bottom: 90%;
+    margin-top: 30%;
+    margin-bottom: 30%;
 }
 
 /*  home page */
@@ -193,13 +193,6 @@ div#thanks {
     border-color: white;
 }
 
-/*
-.help_text ul, .help_text p {
-    list-style: inside;
-    padding-left: 0;
-    font-size: small;
-}
-*/
 
 .errorlist  {
     list-style: none;
@@ -207,4 +200,5 @@ div#thanks {
     color: maroon;
     margin-bottom: 0;
 }
+
 

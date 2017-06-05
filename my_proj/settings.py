@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     
     'portfolio.apps.PortfolioConfig',
     'crispy_forms',
@@ -137,6 +138,7 @@ LANGUAGES = (
   ('ru', _('Russian')),
 )
 
+SITE_ID = 1
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
