@@ -151,6 +151,11 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
+
+LOGIN_REDIRECT_URL = '/django-auth/profile/'
+LOGOUT_REDIRECT_URL = '/home/'
+
+
 ################ crispy forms ##########################
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
