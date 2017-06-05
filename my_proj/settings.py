@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     
     'portfolio.apps.PortfolioConfig',
+    'my_auth.apps.MyAuthConfig',
     'crispy_forms',
     'tinymce',
 ]

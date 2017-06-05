@@ -15,5 +15,5 @@ urlpatterns = [
     url(r'^forms/rich-text-editors/([-\w]+)/$', tinymceview, name="tinymce"),
     url(r'^home/$', TemplateView.as_view(template_name="portfolio/home_page.html"), name="home"),
     url(r'^tinymce/', include('tinymce.urls')),
-    url(r'^$', RedirectView.as_view(pattern_name="portfolio:home", permanent=True)),
+    url(r'^$', RedirectView.as_view(pattern_name="home", permanent=True)),
 ]

@@ -8,7 +8,7 @@
     <div class="row" id="main">
         <div class="col-md-6 col-md-offset-3">
             <h3 style="text-align:center">{% trans "User registration." %}</h3>
-                <form action="{% url 'portfolio:create_user' %}" method="post" autocomplete="off" novalidate="">
+                <form action="{% url 'my_auth:create_user' %}" method="post" autocomplete="off" novalidate="">
                     {% csrf_token %}
                     {{ form.non_field_errors }}
                             <div class="form-group">
