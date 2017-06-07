@@ -8,7 +8,8 @@ urlpatterns = [
 ]
 
 urlpatterns += i18n_patterns(
-    url(r'^django-auth/', include('my_auth.urls')),
-    url('^', include('django.contrib.auth.urls')),
+    url(r'^accounts/', include('my_auth.urls')),
+    url('^accounts/', include('django.contrib.auth.urls')),
     url(r'^', include('portfolio.urls')),
 )
+
