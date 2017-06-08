@@ -155,6 +155,7 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 LOGIN_REDIRECT_URL = '/accounts/profile/'
 LOGOUT_REDIRECT_URL = '/home/'
 
+EMAIL_BACKEND = "my_proj.mail_backends.MailgunEmailBackend"
 
 ################ crispy forms ##########################
 CRISPY_TEMPLATE_PACK = 'bootstrap3'

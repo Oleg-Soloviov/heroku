@@ -1,11 +1,10 @@
-import requests
 import hashlib
 import binascii
 
 from django.contrib.auth.forms import UserCreationForm
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.sites.shortcuts import get_current_site
-from django.core.mail import EmailMultiAlternatives
+from django.core.mail import send_mail
 from django.template import loader
 from django.contrib.auth import get_user_model
 from django.utils.encoding import force_bytes, force_text
@@ -49,6 +48,7 @@ class UserCreationFormWithEmail(UserCreationForm):
         
         uid = force_text(urlsafe_base64_encode(force_bytes(user.pk)))
         
+        
         context = {
             'email': user.email,
             'domain': domain,
@@ -63,10 +63,9 @@ class UserCreationFormWithEmail(UserCreationForm):
         # Email subject *must not* contain newlines
         subject = ''.join(subject.splitlines())
         body = loader.render_to_string('registration/email_verification_email.html', context)
-        requests.post(
-            "https://api.mailgun.net/v3/sandbox075b55521f59465c82d4d87856d6f43c.mailgun.org/messages",
-            auth=("api", "key-e1518fd3e6d897d250e23581f295417c"),
-            data={"from": "<postmaster@sandbox075b55521f59465c82d4d87856d6f43c.mailgun.org>",
-                  "to": user.email,
-                  "subject": subject,
-                  "text": body})
+        
+        send_mail(
+            subject,
+            body,
+            "<postmaster@sandbox075b55521f59465c82d4d87856d6f43c.mailgun.org>",
+            [user.email])
