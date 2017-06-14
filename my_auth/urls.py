@@ -30,6 +30,20 @@ urlpatterns = [
         template_name='registration/my_change_password_done.html')),
         name="my_password_change_done"),
     url('^reset_password/$', auth_views.PasswordResetView.as_view(
-        template_name='registration/my_password_reset_form.html'),
+        template_name='registration/my_password_reset_form.html',
+        email_template_name = 'registration/my_password_reset_email.html',
+        success_url=reverse_lazy('my_auth:my_password_reset_done')),
         name="my_password_reset"),
+    url('^reset_password/done/$', auth_views.PasswordResetDoneView.as_view(
+        template_name='registration/my_password_reset_done.html'),
+        name="my_password_reset_done"),
+    url('^reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
+        auth_views.PasswordResetConfirmView.as_view(
+        template_name='registration/my_password_reset_confirm.html',
+        success_url=reverse_lazy('my_auth:my_password_reset_complete')),
+        name="my_password_reset_confirm"),
+    url('^reset/done/$',
+        auth_views.PasswordResetCompleteView.as_view(
+        template_name='registration/my_password_reset_complete.html',),
+        name="my_password_reset_complete"),
 ]
