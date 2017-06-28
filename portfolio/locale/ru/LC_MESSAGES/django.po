@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-26 09:35+0000\n"
+"POT-Creation-Date: 2017-06-14 15:22+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -240,7 +240,27 @@ msgstr "Страница не найдена (404)"
 msgid "Server Error (500)"
 msgstr "Ошибка сервера (500)"
 
-#: templates/base.html:81
+#: templates/base.html:60
+msgid "User profile"
+msgstr "Профиль пользователя"
+
+#: templates/base.html:63
+msgid "Logout"
+msgstr "Выйти"
+
+#: templates/base.html:67
+msgid "Account"
+msgstr "Аккаунт"
+
+#: templates/base.html:70
+msgid "Login"
+msgstr "Войти"
+
+#: templates/base.html:73
+msgid "Create account"
+msgstr "Создать аккаунт"
+
+#: templates/base.html:103 templates/base_fluid.html:81
 msgid "My portfolio site"
 msgstr "Мой портфолио сайт"
 
@@ -256,11 +276,13 @@ msgstr "Чтобы отправить письмо заполните форму
 msgid "Send"
 msgstr "Отправить"
 
-#: templates/portfolio/css.html:17 templates/portfolio/home_page.html:14
+#: templates/portfolio/css/animation.html:15
+#: templates/portfolio/home_page.html:14
 msgid "Oleg Soloviov"
 msgstr "Соловьев Олег"
 
-#: templates/portfolio/css.html:18 templates/portfolio/home_page.html:15
+#: templates/portfolio/css/animation.html:16
+#: templates/portfolio/home_page.html:15
 msgid ""
 "I'm a web developer. I&nbsp;have more or less skills in Python, Django, "
 "HTML, CSS, JavaScript, Bootstrap and other web technologies. I worked for a "
@@ -270,12 +292,12 @@ msgstr ""
 "Python, Django, HTML, CSS, JavaScript, Bootstrap и в других веб технологиях. "
 "Я работал на маленький коллектив и участвовал  в создании нескольких сайтов. "
 
-#: templates/portfolio/css.html:19 templates/portfolio/home_page.html:16
-#: templates/portfolio/nav.html:23
+#: templates/portfolio/css/animation.html:17
+#: templates/portfolio/home_page.html:16 templates/portfolio/nav.html:24
 msgid "Contact"
 msgstr "Контакты"
 
-#: templates/portfolio/css.html:32
+#: templates/portfolio/css/animation.html:30
 msgid ""
 "I disabled animation for devices with screen less than 768 pixels. Sorry. "
 "Try to view this page with larger monitor."
@@ -283,28 +305,35 @@ msgstr ""
 "Извините, но я отключил анимацию для устройств с экраном меньше чем 768 "
 "пикселей. Попробуйте открыть эту страницу на устройстве с большим монитором."
 
-#: templates/portfolio/css.html:39 templates/portfolio/home_page.html:35
+#: templates/portfolio/css/animation.html:37
+#: templates/portfolio/home_page.html:42
 msgid "CSS effects"
 msgstr "CSS эффекты"
 
-#: templates/portfolio/css.html:40 templates/portfolio/home_page.html:36
+#: templates/portfolio/css/animation.html:38
+#: templates/portfolio/home_page.html:43
 msgid ""
 "CSS describes the style, layout of an HTML document and transformation of "
 "it's elements."
 msgstr ""
-"CSS описывает стиль, взаимное расположение и трансформацию элементов документа HTML."
+"CSS описывает стиль, взаимное расположение и трансформацию элементов "
+"документа HTML."
 
-#: templates/portfolio/css.html:41 templates/portfolio/css.html:48
-#: templates/portfolio/css.html:55 templates/portfolio/home_page.html:37
-#: templates/portfolio/home_page.html:44 templates/portfolio/home_page.html:51
+#: templates/portfolio/css/animation.html:39
+#: templates/portfolio/css/animation.html:46
+#: templates/portfolio/css/animation.html:53
+#: templates/portfolio/home_page.html:37 templates/portfolio/home_page.html:44
+#: templates/portfolio/home_page.html:51 templates/portfolio/home_page.html:58
 msgid "View details"
 msgstr "Подробности"
 
-#: templates/portfolio/css.html:46 templates/portfolio/home_page.html:42
+#: templates/portfolio/css/animation.html:44
+#: templates/portfolio/home_page.html:49
 msgid "Django form fields"
 msgstr "Поля Django"
 
-#: templates/portfolio/css.html:47 templates/portfolio/home_page.html:43
+#: templates/portfolio/css/animation.html:45
+#: templates/portfolio/home_page.html:50
 msgid ""
 "The Django forms library comes with a set of Field classes that represent "
 "common validation needs."
@@ -312,11 +341,13 @@ msgstr ""
 "Django фреймворк содержит библиотеку полей HTML форм, реализующих основные "
 "случаи проверки (валидации) полей."
 
-#: templates/portfolio/css.html:53 templates/portfolio/home_page.html:49
+#: templates/portfolio/css/animation.html:51
+#: templates/portfolio/home_page.html:56
 msgid "Rich text editors"
 msgstr "Редакторы текста"
 
-#: templates/portfolio/css.html:54 templates/portfolio/home_page.html:50
+#: templates/portfolio/css/animation.html:52
+#: templates/portfolio/home_page.html:57
 msgid ""
 "Browser-based WYSIWYG content editors bring to the web features found in "
 "desktop editing applications."
@@ -348,6 +379,14 @@ msgstr "HTML5 поля"
 msgid "Choice fields"
 msgstr "Поля выбора"
 
+#: templates/portfolio/home_page.html:35
+msgid "Authentication"
+msgstr "Идентификация"
+
+#: templates/portfolio/home_page.html:36
+msgid "Django’s authentication system in its default configuration."
+msgstr "Система аутентификации Django в конфигурации по умолчанию."
+
 #: templates/portfolio/nav.html:2
 msgid "Home"
 msgstr "Главная"
@@ -364,7 +403,6 @@ msgstr "Время и Дата"
 msgid "Thank you for your email."
 msgstr "Спасибо за Ваше сообщение."
 
-#: templates/portfolio/thanks.html:13
+#: templates/portfolio/thanks.html:12
 msgid "Thank you for your email. I will answer as soon as possible."
 msgstr "Спасибо за Ваше письмо. Я отвечу как можно быстрее."
-

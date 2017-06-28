@@ -1,0 +1,231 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-15 12:32+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: forms.py:28
+#, python-format
+msgid "Email %(value)s already exists."
+msgstr ""
+
+#: templates/registration/change_password.html:5
+#: templates/registration/profile.html:16
+msgid "Change your password."
+msgstr "Сменить пароль."
+
+#: templates/registration/change_password.html:34
+msgid "Change password"
+msgstr ""
+
+#: templates/registration/create_user.html:5
+msgid "Registration"
+msgstr ""
+
+#: templates/registration/create_user.html:10
+msgid "User registration."
+msgstr "Регистрация пользователя."
+
+#: templates/registration/create_user.html:40
+#: templates/registration/login.html:37
+msgid "Create account"
+msgstr "Создать аккаунт"
+
+#: templates/registration/create_user.html:43
+msgid "Reset"
+msgstr ""
+
+#: templates/registration/email_confirm_done.html:5
+msgid "Your account is active."
+msgstr "Аккаунт активирован."
+
+#: templates/registration/email_confirm_done.html:12
+msgid "Your account is active now."
+msgstr "Ваш аккаунт активирован."
+
+#: templates/registration/email_confirm_done.html:13
+#: templates/registration/login.html:30
+msgid "Login"
+msgstr "Войти"
+
+#: templates/registration/email_varify_subject.txt:2
+#, python-format
+msgid "Email verification %(site_name)s"
+msgstr ""
+
+#: templates/registration/email_verification_email.html:2
+#, python-format
+msgid ""
+"You're receiving this email because you created an user account at "
+"%(site_name)s."
+msgstr ""
+"Вы получили это письмо, потому что вы (или кто-то другой) создали учётную "
+"запись на сайте %(site_name)s, которая связана с этим адресом электронной "
+"почты."
+
+#: templates/registration/email_verification_email.html:4
+msgid ""
+"Please go to the following page to verify your email and compliete the "
+"registration:"
+msgstr ""
+"Перейдите на следующую страницу, чтобы подтвердить свою электронную почту и "
+"завершить регистрацию:"
+
+#: templates/registration/email_verification_email.html:8
+#: templates/registration/my_password_reset_email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: templates/registration/email_verification_email.html:10
+#: templates/registration/my_password_reset_email.html:10
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: templates/registration/email_verification_email.html:12
+#: templates/registration/my_password_reset_email.html:12
+#, python-format
+msgid "The %(site_name)s team"
+msgstr ""
+
+#: templates/registration/login.html:5
+msgid "Login page."
+msgstr "Страница авторизации."
+
+#: templates/registration/login.html:42
+msgid "I forgot password"
+msgstr "Я забыл пароль"
+
+#: templates/registration/my_change_password_done.html:12
+#, python-format
+msgid ""
+"Password of <span style=\"color:green\">&quot;%(user_name)s&quot;</span> was "
+"successfully changed."
+msgstr ""
+"Пароль пользователя <span style=\"color:green\">&quot;%(user_name)s&quot;</"
+"span> был успешно изменен. "
+
+#: templates/registration/my_change_password_done.html:13
+msgid "Return to"
+msgstr "Вернуться на "
+
+#: templates/registration/my_change_password_done.html:13
+msgid "profile page"
+msgstr "страницу профиля пользователя"
+
+#: templates/registration/my_password_reset_complete.html:12
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: templates/registration/my_password_reset_complete.html:13
+msgid "Log in"
+msgstr ""
+
+#: templates/registration/my_password_reset_confirm.html:14
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: templates/registration/my_password_reset_confirm.html:21
+msgid "New password:"
+msgstr ""
+
+#: templates/registration/my_password_reset_confirm.html:32
+msgid "Confirm password:"
+msgstr ""
+
+#: templates/registration/my_password_reset_confirm.html:40
+msgid "Change my password"
+msgstr ""
+
+#: templates/registration/my_password_reset_confirm.html:46
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: templates/registration/my_password_reset_done.html:12
+msgid ""
+"We've emailed you instructions for setting your password, if an account "
+"exists with the email you entered. You should receive them shortly."
+msgstr ""
+
+#: templates/registration/my_password_reset_done.html:13
+msgid ""
+"If you don't receive an email, please make sure you've entered the address "
+"you registered with, and check your spam folder."
+msgstr ""
+
+#: templates/registration/my_password_reset_email.html:2
+#, python-format
+msgid ""
+"You're receiving this email because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: templates/registration/my_password_reset_email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: templates/registration/my_password_reset_form.html:13
+msgid ""
+"Forgotten your password? Enter your email address below, and we'll email "
+"instructions for setting a new one."
+msgstr ""
+
+#: templates/registration/my_password_reset_form.html:26
+msgid "Reset my password"
+msgstr ""
+
+#: templates/registration/profile.html:6
+#, python-format
+msgid "Profile page of %(user_name)s"
+msgstr "Профиль пользователя %(user_name)s"
+
+#: templates/registration/profile.html:14
+#, python-format
+msgid ""
+"Profile page of <span style=\"color:green\">&quot;%(user_name)s&quot;</span>"
+msgstr ""
+"Профиль пользователя <span style=\"color:green\">&quot;%(user_name)s&quot;</"
+"span>"
+
+#: templates/registration/user_created.html:6
+#, python-format
+msgid "User %(request.session.username)s was successfully created."
+msgstr "Пользователь %(request.session.username)s был успешно создан."
+
+#: templates/registration/user_created.html:14
+#, python-format
+msgid ""
+"User <span style=\"color:green\">&quot;%(user_name)s&quot;</span> was "
+"successfully created."
+msgstr ""
+"Профиль пользователя <span style=\"color:green\">&quot;%(user_name)s&quot;</"
+"span> был успешно создан. "
+
+#: templates/registration/user_created.html:15
+#, python-format
+msgid ""
+"On your address: <span style=\"color:green\">&quot;%(email)s&quot;</span> "
+"was sent a letter. To complete the registration, follow the link in the "
+"email."
+msgstr ""
+"На ваш адрес: <span style=\"color:green\">&quot;%(email)s&quot;</span> "
+"послано письмо. Чтобы завершить регистрацию, пройдите по ссылке в письме."

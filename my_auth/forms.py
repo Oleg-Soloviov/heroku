@@ -10,6 +10,9 @@ from django.contrib.auth import get_user_model
 from django.utils.encoding import force_bytes, force_text
 from django.utils.http import urlsafe_base64_encode
 from django.core.exceptions import ValidationError
+from django.forms import Textarea
+
+from .models import UserProfile
 
 User = get_user_model()
 
@@ -19,7 +22,12 @@ class UserCreationFormWithEmail(UserCreationForm):
     verification of uniqness of the entered email and custom send_email.
     """
     class Meta(UserCreationForm.Meta):
+        model = UserProfile
         fields = ("username", "email")
+        
+        widgets = {
+            'address': Textarea(attrs={'cols': 36, 'rows': 5}),
+        }
     
     def clean_email(self):
         data = self.cleaned_data['email']

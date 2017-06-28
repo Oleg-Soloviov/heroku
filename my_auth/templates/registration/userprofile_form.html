@@ -1,0 +1,20 @@
+{% extends 'registration/form_holder.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block title %}
+{% blocktrans with user_name=user.username %}Profile page of {{ user_name }}{% endblocktrans %}
+{% endblock %}
+
+{% block form_place %}
+    <h3>{% blocktrans with user_name=user.username %}Profile page of <span style="color:green">&quot;{{ user_name }}&quot;</span>{% endblocktrans %}</h3>
+    <form class="bs3" method="post" action="" novalidate>{% csrf_token %}
+    {% include "registration/bootstrap_form_loop_snippet.html" %}
+    <div class="form-group">
+        <input class="btn btn-default btn-block" type="submit" value="{% trans 'Update' %}" />
+    </div>
+    </form>
+    <ul>
+        <li><a href="{% url 'my_auth:my_password_change' %}">{% trans 'Change your password.' %}</a></li>
+    </ul>
+{% endblock form_place %}

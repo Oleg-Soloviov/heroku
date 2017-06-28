@@ -1,0 +1,225 @@
+html {
+    height:100%;
+}
+
+body {
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  //background-color: #BFA187;
+  //background-image: url(/static/images/backgrounds/bkgr_1920_1080.jpg);
+  //background-attachment: fixed;
+  //background-repeat: no-repeat;
+  //background-position: center;
+  //background-size: cover;
+  //color: #33190B;
+}
+
+/*
+a, a>span.gliphicon {
+    color: #6c050d;
+}
+*/
+
+/*
+a:hover {
+    color: #284075;
+}
+*/
+
+/* navigation */
+/*
+#my_navbar {
+    background-color: rgb(114, 90, 72);
+    background-color: rgba(114, 90, 72, 0.8);
+    margin-top: 0px;
+}
+*/
+
+/*
+#my_navbar * {
+    color: white;
+    background-color: unset;
+}
+*/
+
+/*
+#my_navbar ul.nav li.active li.active {
+    color: #33190B;
+    text-decoration: underline;
+}
+*/
+
+/*
+#my_navbar ul.nav a:hover, #my_navbar ul.nav a:hover span, #my_navbar ul.nav button:hover {
+    color: #43491B;
+}
+*/
+
+/*
+#my_navbar ul.nav li.active > a, #my_navbar ul.nav li.active > a span {
+    color: #33190B;
+    text-decoration: underline;
+}
+
+#my_navbar .dropdown-menu a {
+    background-color: rgb(114, 90, 72);
+    background-color: rgba(114, 90, 72, 0.8);
+}
+
+#my_navbar .dropdown-menu a:hover {
+    background-color: rgb(124, 100, 82);
+    background-color: rgba(124, 100, 82, 0.8);
+}
+
+#my_navbar button.navbar-toggle {
+    border-color: #33190B;
+}
+
+#my_navbar span.icon-bar {
+    background-color: #33190B;
+}
+*/
+
+/* main section */
+
+/*
+#main {
+    background-color: rgb(134, 110, 92);
+    background-color: rgba(134, 110, 92, 0.9);
+    border-radius: 5px;
+}
+
+#main li a {
+    background: unset;
+    color: white;
+}
+
+#main a:hover {
+    color: #BB9D81;
+}
+
+#main li.active {
+    color: white;
+    background: #33190B;
+    border-radius: 5px;
+}
+
+#main .panel {
+    background-color: rgba(134, 110, 92, 0.9);
+    border-color: #33190B;  
+}
+
+#main form input, #main form select, #main form textarea {
+    background-color: #33190B;
+}
+
+#main form *.input-group span {
+    background-color: #43291B;
+    color: white;
+}
+
+#main input[name=submit], #main input[name=reset], #main button[type=submit], #main button[type=reset] {
+    color: tomato;
+    background: #33190B;
+    border-radius: 5px;
+    border-color: #33190B;
+    outline: none;
+}
+
+#main input[name=submit]:hover, #main input[name=reset]:hover, #main button[type=submit]:hover, #main button[type=reset]:hover {
+    color: #BB9D81;
+    background: #33190B;
+    border-radius: 5px;
+}
+*/
+
+/*       thanks page      */
+div#thanks {
+    margin-top: 30%;
+    margin-bottom: 30%;
+}
+
+/*  home page */
+
+.my_rezume {
+    //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    //text-align: center;
+    //background-color: rgb(134, 110, 92);
+    //background-color: rgba(134, 110, 92, 0.9);
+    //border: thin solid blue;
+    border-radius: 5px;
+    padding: 0px 10px 1px 5px;
+}
+.my_rezume img {
+    width: 40%;
+    float: left;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+/*
+.my_rezume a.btn-default {
+    background: unset;
+    color: #33190B;
+    border-color: #33190B;
+    -webkit-transition: background 0.5s; 
+    transition: background 0.5s;
+    -webkit-transition: color 0.5s; 
+    transition: color 0.5s;
+}
+*/
+
+/*
+.my_rezume a.btn-default:hover {
+    background: #33190B;
+    color: white;
+    border-color: white;
+}
+
+.my_jumbotron {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(134, 110, 92);
+    background-color: rgba(134, 110, 92, 0.9);
+    border-radius: 5px;
+    padding: 0px 10px 1px 5px;
+}
+
+#my_header_items  div.col-md-6 div {
+    background-color: rgb(134, 110, 92);
+    background-color: rgba(134, 110, 92, 0.9);
+    border-radius: 5px;
+    padding: 0px 10px 1px 10px;
+    position:relative;
+    min-height: 190px;
+}
+*/
+
+/*
+#my_header_items a.btn-default {
+    background: unset;
+    color: #33190B;
+    border-color: #33190B;
+    -webkit-transition: background 0.5s; 
+    transition: background 0.5s;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+    position:absolute;
+    bottom: 10px;
+}
+
+#my_header_items a.btn-default:hover {
+    background: #33190B;
+    color: white;
+    border-color: white;
+}
+
+
+.errorlist  {
+    list-style: none;
+    padding: 0;
+    color: maroon;
+    margin-bottom: 0;
+}
+*/
+
+

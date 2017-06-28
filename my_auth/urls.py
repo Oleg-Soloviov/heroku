@@ -3,13 +3,12 @@ from django.urls import reverse_lazy
 from django.contrib.auth import views as auth_views
 from django.views.generic import TemplateView
 from django.contrib.auth.decorators import login_required
-from .views import CreateUserView, UserEmailConfirm
+from .views import CreateUserView, UserEmailConfirm, ProfileView
 
 
 app_name = 'my_auth'
 urlpatterns = [
-    url(r'^profile/$', login_required(TemplateView.as_view(
-        template_name="registration/profile.html")),
+    url(r'^profile/$', login_required(ProfileView.as_view()),
         name="profile"),
     url(r'^create_user/$', CreateUserView.as_view(),
         name="create_user"),

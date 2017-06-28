@@ -54,25 +54,26 @@
 
 {% block main_container %}
     <div class="row" id="main">
-        <div class="col-md-8 col-md-offset-2">
-            <h3>Django textareas rich text editors.</h3>
-        </div>
-        <div id="django_forms" class="col-md-8 col-md-offset-2">
-            <ul class="nav nav-pils nav-justified" role="tablist">
-                <li role="presentation" {% if 'django-tinymce' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'django-tinymce' %}">Django-tinymce</a></li>
-                <li role="presentation" {% if 'tinymce4' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'tinymce4' %}">TinyMCE 4</a></li>
-                <li role="presentation" {% if 'wysiwyg' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'wysiwyg' %}">Nicedit</a></li>
-                <li role="presentation" {% if 'ckeditor' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'ckeditor' %}">CKEditor</a></li>
-            </ul>
-            <div>
-                {% crispy form %}
-                {% if 'ckeditor' in request.resolver_match.args %}
-                    <script>
-                        CKEDITOR.replace( 'id_content', {'height': '350px'} );
-                    </script>
-                {% endif %}
-            </div>
-        </div><!-- col-md-12 -->
+        <div class="col-md-8 col-md-offset-2 django_forms">
+            <br />
+            <div class="panel panel-default">
+                <div class="panel-body item_panel">
+                    <h3>{% trans "Django textareas rich text editors." %}</h3>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-pills nav-justified" role="tablist">
+                        <li role="presentation" {% if 'django-tinymce' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'django-tinymce' %}">Django-tinymce</a></li>
+                        <li role="presentation" {% if 'tinymce4' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'tinymce4' %}">TinyMCE 4</a></li>
+                        <li role="presentation" {% if 'wysiwyg' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'wysiwyg' %}">Nicedit</a></li>
+                        <li role="presentation" {% if 'ckeditor' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:tinymce' 'ckeditor' %}">CKEditor</a></li>
+                    </ul>
+                    {% crispy form %}
+                    {% if 'ckeditor' in request.resolver_match.args %}
+                        <script>
+                            CKEDITOR.replace( 'id_content', {'height': '350px'} );
+                        </script>
+                    {% endif %}
+                </div><!-- panel-body -->
+            </div><!-- panel -->
+        </div><!-- col-md -->
     </div>
 {% endblock main_container %}
-

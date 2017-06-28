@@ -5,32 +5,37 @@ import hmac
 from django.urls import reverse_lazy
 from django.views import View
 from django.views.generic import TemplateView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from django.contrib.auth import  login, get_user_model
 from django.template.response import TemplateResponse
 from django.http import HttpResponseRedirect, HttpResponseNotFound, HttpResponse, Http404
 from django.utils.encoding import force_bytes, force_text
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.shortcuts import get_object_or_404
+from django.urls import reverse_lazy
 
 from .forms import UserCreationFormWithEmail
+from .models import UserProfile
 
 User = get_user_model()
 
+
+class ProfileView(UpdateView):
+    
+    success_url = reverse_lazy('my_auth:profile')
+    template_name = 'registration/userprofile_form.html'
+    
+    def get_object(self, queryset=None):
+        obj = UserProfile.objects.get(id=self.request.user.pk)
+        return obj
+    
+    fields = ['username', 'first_name', 'last_name', 'email', 'address']
 
 class CreateUserView(CreateView):
     template_name = 'registration/create_user.html'
     success_url = reverse_lazy('my_auth:user_created')
     form_class=UserCreationFormWithEmail
-    
-    def get_form(self):
-        form = super(CreateUserView, self).get_form()
-        for f in form.fields.keys():
-            form.fields[f].widget.attrs.update({'autofocus': False, 'autocomplete': 'off', 'class':'form-control'})
-            if form.has_error(f):
-                form.fields[f].widget.attrs.update({'style':'background-color:maroon;color:black;', 'class':'form-control error-item'})
-        return form
-    
+
     def form_valid(self, form):
         self.object = form.save()
         self.object.is_active = False

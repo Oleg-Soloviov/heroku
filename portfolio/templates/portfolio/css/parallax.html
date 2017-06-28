@@ -145,7 +145,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-default navbar-fixed-top" id="my_navbar">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -155,13 +155,35 @@
             <span class="icon-bar"></span>
           </button>
         </div>
-        <div id="navbar" class="navbar-collapse collapse navbar-right">
+        <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
               {% include 'portfolio/nav.html' %}
           </ul>
           
            <ul class="nav navbar-nav navbar-right">
-               
+               {% if user.is_authenticated %}
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{ user.username }} <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                   <li>
+                        <a href="{% url 'my_auth:profile' %}">{% trans 'User profile' %}</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'logout' %}">{% trans 'Logout' %}</a>
+                    </li>
+                {% else %}
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{% trans 'Account' %} <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li>
+                    <a href="{% url 'login' %}">{% trans 'Login' %}</a>
+                   </li>
+                    <li>
+                    <a href="{% url 'my_auth:create_user' %}">{% trans 'Create account' %}</a>
+                   </li>
+               {% endif %}
+                 </ul>
+
               <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ current_lang.name_local }} ({{ current_lang.code }}) <span class="caret"></span></a>
                   <ul class="dropdown-menu">
@@ -178,6 +200,7 @@
                     </li>
                   </ul>
               </li>
+            <li>
            </ul><!-- .navbar-right -->
         </div><!--/.navbar-collapse -->
       </div><!-- /container -->
@@ -231,5 +254,3 @@
     {% endblock %}
   </body>
 </html>
-
-

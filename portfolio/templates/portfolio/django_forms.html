@@ -6,21 +6,22 @@
 {% block title %}{% trans "All Django form fields." %}{% endblock %}
 
 {% block main_container %}
-        <div class="row" id="main">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>{% trans "A full set of Django form fields" %}</h3>
-            </div>
-            <div id="django_forms" class="col-md-8 col-md-offset-2">
-                  <!-- Nav tabs -->
-                <ul class="nav nav-pills nav-justified" role="tablist">
-                    <li role="presentation" {% if 'text-input' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:django_forms' 'text-input' %}">{% trans "TextInput fields" %}</a></li>
-                    <li role="presentation" {% if 'date-time-fields' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:django_forms' 'date-time-fields' %}">{% trans "Time and Date" %}</a></li>
-                    <li role="presentation" {% if 'html5-input-types' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:django_forms' 'html5-input-types' %}">{% trans "HTML5 input" %}</a></li>
-                    <li role="presentation" {% if 'choice-fields' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:django_forms' 'choice-fields' %}">{% trans "Choice fields" %}</a></li>
-                </ul>
-                <div>
+    <div class="row" id="main">
+        <div class="col-md-8 col-md-offset-2 django_forms">
+            <br />
+            <div class="panel panel-default">
+                <div class="panel-body item_panel">
+                    <h3>{% trans "A full set of Django form fields" %}</h3>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-pills nav-justified" role="tablist">
+                        <li role="presentation" {% if 'text-input' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:django_forms' 'text-input' %}">{% trans "TextInput fields" %}</a></li>
+                        <li role="presentation" {% if 'date-time-fields' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:django_forms' 'date-time-fields' %}">{% trans "Time and Date" %}</a></li>
+                        <li role="presentation" {% if 'html5-input-types' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:django_forms' 'html5-input-types' %}">{% trans "HTML5 input" %}</a></li>
+                        <li role="presentation" {% if 'choice-fields' in request.resolver_match.args %}class="active"{% endif %}><a href="{% url 'portfolio:django_forms' 'choice-fields' %}">{% trans "Choice fields" %}</a></li>
+                    </ul>
                     {% crispy form %}
-                </div>
-            </div><!-- col-md-12 -->
-        </div>
+                </div><!-- panel-body -->
+            </div><!-- panel -->
+        </div><!-- col-md -->
+    </div>
 {% endblock main_container %}

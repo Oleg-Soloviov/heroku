@@ -14,29 +14,11 @@
         to {margin-top: 0px;}
     }
 
-    div.my_jumbotron {
-        position:relative;
-        margin-top: -250px;
-        animation-name: jumbotron_drop_down;
-        animation-duration: 1.75s;
-        animation-delay: 1.25s;
-        animation-timing-function: ease;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes jumbotron_drop_down {
-        from {margin-top: -250px;}
-        to {margin-top: 0px;}
-    }
-
-
-
-
-    footer, hr, div#my_header_items div {
+    footer, hr{
         opacity: 0.0;
         animation-name: reveal_items;
-        animation-duration: 1s;
-        animation-delay: 3s;
+        animation-duration: 1.25s;
+        animation-delay: 0.25s;
         animation-timing-function: ease-out;
         animation-fill-mode: forwards;
     }
@@ -46,11 +28,47 @@
         to {opacity: 1;}
     }
 
-    .my_jumbotron h2 {
-        display: none;
+
+
+#main_column > div.row > div {
+    -ms-transform: rotate(180deg);  /* IE 9 */
+    -ms-transform-origin: 600px 600px; /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    -webkit-transform-origin: 600px 600px; /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+    transform-origin: 600px 600px;
+    animation-name: rotate_main_items_1;
+    animation-duration: 2.5s;
+    animation-delay: 1.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
     }
 
-div.my_rezume {
+    @keyframes rotate_main_items_1 {
+        from {transform: rotate(180deg);}
+        to {transform: rotate(0deg);}
+    }
+
+.item_panel {
+    background-image: url("/static/images/backgrounds/django.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: 1600px 600px;
+    animation-name: move_background;
+    animation-duration: 7s;
+    animation-delay: 5.5s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    }
+
+    @keyframes move_background {
+        from {background-position: 1600px 500px;}
+        to {background-position: -1600px -300px;;}
+    }
+
+
+#left_column {
     -ms-transform: rotate(-90deg); /* IE 9 */
     -ms-transform-origin: -300px 50%%; /* IE 9 */
     -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
@@ -76,6 +94,3 @@ div.my_rezume {
         display: none;
     }
 }
-
-
-

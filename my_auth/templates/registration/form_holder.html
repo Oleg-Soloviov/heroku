@@ -2,17 +2,16 @@
 {% load staticfiles %}
 {% load i18n %}
 
-{% block title %}{% trans "Thank you for your email." %}{% endblock %}
+{% block title %}{% endblock %}
 
 {% block main_container %}
+        <br />
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                <div id="thanks" class="panel panel-default">
+                <div class="panel panel-default item_panel">
                   <div class="panel-body">
-                    <h3>Profile page of {{ user.username }}</h3>
-                    <ul>
-                        <li><a href="{% url 'my_auth:my_password_change' %}">Change your password</a></li>
-                    </ul>
+                      {% block form_place %}
+                      {% endblock %}
                   </div>
                 </div>
             </div><!-- col-md-12 -->
