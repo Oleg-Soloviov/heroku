@@ -38,7 +38,7 @@ ALLOWED_HOSTS = ["secret-mesa-26263.herokuapp.com"]
 #~ else:
     #~ DEBUG = True
     #~ ALLOWED_HOSTS = ["127.0.0.1","10.0.2.2"]
-DEBUG = False
+DEBUG = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',
