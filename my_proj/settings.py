@@ -27,18 +27,18 @@ SECRET_KEY = 'w-i9r*+qj$!hfom7$f#qcqmnfq5v+e*&@nx5(v(2k4mi)-3f3b'
 
 
 ADMINS = [('Oleg', 'osoloviov@mail.ru'), ('Oleg', 'osoloviov2000@gmail.com')]
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'my_proj.mail_backends.MailgunEmailBackend'
 # SECURITY WARNING: don't run with debug turned on in production!
 # set DEBUG virable on heroku to 'PRODUCTION'
 MY_ENV = os.environ.get('DEBUG', 'False')
 
-if MY_ENV=='PRODUCTION':
-    DEBUG = False
-    ALLOWED_HOSTS = ["secret-mesa-26263.herokuapp.com"]
-else:
-    DEBUG = True
-    ALLOWED_HOSTS = ["127.0.0.1","10.0.2.2"]
-
+#~ if MY_ENV=='PRODUCTION':
+    #~ DEBUG = False
+    #~ ALLOWED_HOSTS = ["secret-mesa-26263.herokuapp.com"]
+#~ else:
+    #~ DEBUG = True
+    #~ ALLOWED_HOSTS = ["127.0.0.1","10.0.2.2"]
+DEBUG = False
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -157,8 +157,6 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 LOGIN_REDIRECT_URL = '/accounts/profile/'
 LOGOUT_REDIRECT_URL = '/home/'
-
-EMAIL_BACKEND = "my_proj.mail_backends.MailgunEmailBackend"
 
 ################ crispy forms ##########################
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
