@@ -27,7 +27,15 @@ SECRET_KEY = 'w-i9r*+qj$!hfom7$f#qcqmnfq5v+e*&@nx5(v(2k4mi)-3f3b'
 
 
 ADMINS = [('Oleg', 'osoloviov@mail.ru'), ('Oleg', 'osoloviov2000@gmail.com')]
-EMAIL_BACKEND = 'my_proj.mail_backends.MailgunEmailBackend'
+#EMAIL_BACKEND = 'my_proj.mail_backends.MailgunEmailBackend'
+#EMAIL_BACKEND = "my_proj.gmail_backends.GmailSmtpEmailBackend"
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "osoloviov2000@gmail.com"
+EMAIL_HOST_PASSWORD = "Oleg152102"
+EMAIL_USE_TLS = True
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 # set DEBUG virable on heroku to 'PRODUCTION'
 MY_ENV = os.environ.get('DEBUG', 'False')

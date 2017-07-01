@@ -17,7 +17,7 @@
     footer, hr{
         opacity: 0.0;
         animation-name: reveal_items;
-        animation-duration: 1.25s;
+        animation-duration: 0.5s;
         animation-delay: 0.25s;
         animation-timing-function: ease-out;
         animation-fill-mode: forwards;
