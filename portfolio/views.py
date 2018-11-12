@@ -2,10 +2,9 @@ from django.urls import reverse_lazy
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.views.generic.edit import FormView
-from portfolio.contact_form import ContactForm
+from ..portfolio.contact_form import ContactForm
 from .forms import ChoiceDjangoFieldsForm, TextInputFieldsForm, TextBasedInputFieldsForm, DateTimeDjangoFieldsForm
-from tinymce.widgets import TinyMCE
-
+# from tinymce.widgets import TinyMCE
 
 
 class ContactView(FormView):
@@ -16,6 +15,7 @@ class ContactView(FormView):
     def form_valid(self, form):
         form.send_email()
         return super(ContactView, self).form_valid(form)
+
 
 def django_fields(request, fields):
     if request.method == 'POST':
@@ -47,6 +47,7 @@ def django_fields(request, fields):
 class CssView(TemplateView):
     def get_template_names(self):
         if 'animation' in self.args:
-            return ["portfolio/css/animation.html",]
+            return ["portfolio/css/animation.html", ]
         elif 'parallax' in self.args:
-            return ["portfolio/css/parallax.html",]
+            return ["portfolio/css/parallax.html", ]
+
