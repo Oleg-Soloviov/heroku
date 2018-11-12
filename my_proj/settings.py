@@ -27,8 +27,7 @@ SECRET_KEY = 'w-i9r*+qj$!hfom7$f#qcqmnfq5v+e*&@nx5(v(2k4mi)-3f3b'
 
 
 ADMINS = [('Oleg', 'osoloviov@list.ru'), ('Oleg', 'osoloviov2000@gmail.com')]
-EMAIL_BACKEND = 'my_proj.my_mail_backends.MailgunEmailBackend'
-#EMAIL_BACKEND = 'my_proj.mail_backends.MailgunEmailBackend'
+EMAIL_BACKEND = 'my_proj.mail_backends.MailgunEmailBackend'
 #EMAIL_BACKEND = "my_proj.gmail_backends.GmailSmtpEmailBackend"
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_PORT = 587
