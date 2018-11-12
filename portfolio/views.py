@@ -2,7 +2,7 @@ from django.urls import reverse_lazy
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.views.generic.edit import FormView
-from ..portfolio.contact_form import ContactForm
+from portfolio.contact_form import ContactForm
 from .forms import ChoiceDjangoFieldsForm, TextInputFieldsForm, TextBasedInputFieldsForm, DateTimeDjangoFieldsForm
 # from tinymce.widgets import TinyMCE
 
